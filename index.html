@@ -8,52 +8,49 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
         }
 
         header {
+            position: relative;
             text-align: center;
-            padding: 40px 20px;
-            background-color: #007acc; /* Blue background for header */
-            color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px 20px; /* Increased padding for better spacing */
+            background-color: #ffffff; /* White background for header */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
         }
 
         .ribbon {
-            background-color: #005f99; /* Darker blue for the ribbon */
-            padding: 15px 0;
+            background-color: #4f4f4f; /* Dark gray background for the ribbon */
+            padding: 10px 0;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Allows wrapping of menu items */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative; /* Changed to relative */
+            top: 0; /* Adjust as needed */
+            margin-bottom: 20px; /* Space below the ribbon */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1; /* Ensures the ribbon is above the header */
         }
 
         .ribbon a {
             color: white;
-            padding: 12px 20px;
+            padding: 10px 15px;
             text-decoration: none;
             border-radius: 5px;
-            margin: 5px 10px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
             font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
         }
 
         .ribbon a:hover {
-            background-color: #003f66; /* Even darker blue on hover */
-            transform: translateY(-2px); /* Lift effect on hover */
+            background-color: #7d7d7d; /* Lighter gray on hover */
         }
 
         .container {
-            max-width: 800px; /* Centering the content */
-            margin: 20px auto;
-            background-color: white; /* White background for content */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
         }
 
         .section {
@@ -61,31 +58,21 @@
         }
 
         .section-title {
-            color: #007acc; /* Blue color for section titles */
-            font-size: 1.8em;
-            border-bottom: 2px solid #007acc; /* Blue underline */
+            color: #333; /* Dark text color for section titles */
+            font-size: 1.5em;
+            border-bottom: 2px solid #333; /* Dark underline */
             padding-bottom: 5px;
-            margin-bottom: 20px;
         }
 
         footer {
             text-align: center;
-            padding: 20px 0;
-            background-color: #007acc; /* Blue background for footer */
-            color: white;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Responsive styles */
-        @media (max-width: 600px) {
-            .ribbon a {
-                padding: 10px 15px;
-                font-size: 14px; /* Smaller font size on mobile */
-            }
-
-            .section-title {
-                font-size: 1.5em; /* Smaller section titles on mobile */
-            }
+            padding: 10px 0;
+            background-color: #ffffff; /* White background for footer */
+            color: #333;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
         }
     </style>
 </head>
@@ -106,9 +93,9 @@
     <header id="header">
         <h1>Astrit Tola</h1>
         <p>
-            <a href="mailto:astrit.tola@utdallas.edu" style="color: white;">astrit.tola@utdallas.edu</a> • 
-            <a href="https://www.linkedin.com/in/astrit-tola-bb2836b5" style="color: white;">LinkedIn</a> • 
-            <a href="https://github.com/AstritTola" style="color: white;">GitHub</a>
+            <a href="mailto:astrit.tola@utdallas.edu">astrit.tola@utdallas.edu</a> • 
+            <a href="https://www.linkedin.com/in/astrit-tola-bb2836b5">LinkedIn</a> • 
+            <a href="https://github.com/AstritTola">GitHub</a>
         </p>
     </header>
 
@@ -158,7 +145,8 @@
                 <li>A. Tola, J. A. Myrich, B. Coskunuzer. <em>PROXI: Challenging the GNNs for Link Prediction.</em>, submitted, <a href="https://arxiv.org/pdf/2410.01802">arxiv.org/pdf/2410.01802</a>.</li>
                 <li>A. Tola, F. M. Taiwo, C. G, Akcora, B. Coskunuzer. <em>TopER: Topological Embeddings in Graph Representation Learning.</em>, submitted, <a href="https://arxiv.org/pdf/2410.01778">arxiv.org/pdf/2410.01778</a>.</li>
                 <li>M. Akhmet, M. O. Fen, A. Tola. <em>A Numerical Analysis of Poincaré Chaos.</em> Discontinuity, Nonlinearity, and Complexity, 12(1) (2023), 183-195.</li>
-                <li>M. Akhmet, M. O. Fen, A. Tola. <em>Strange Non-Chaotic Attractors with Unpredictable Strings.</em> Theoretical and Applied Mechanics Letters, 12(1) (2022), 12-17.</li>
+                <li>M. Akhmet, M. O. Fen, A. Tola. <em>Strange Non-Chaotic Attractors with Unpredictable Trajectories.</em> Journal of Vibration Testing and System Dynamics, 6(3) (2022), 317-327, <a href="https://arxiv.org/pdf/2110.15805">arxiv.org/pdf/2110.15805</a>.</li>
+                <li>M. Akhmet, A. Tola. <em>Unpredictable Strings.</em> Kazakh Mathematical Journal, 20(3) (2020), 16-23.</li>
             </ul>
         </div>
 
