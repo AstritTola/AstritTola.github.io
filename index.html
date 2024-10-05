@@ -1,207 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrit Tola's CV</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Astrit Tola - Curriculum Vitae</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #444;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
             line-height: 1.6;
+            color: #444;
+            background: #f9f9f9;
         }
-
-        header {
-            position: relative;
+        h1 {
+            color: #004080;
+            font-size: 2.8em;
             text-align: center;
-            padding: 30px 20px;
-            background-color: #0077cc; /* Header background color */
-            color: #ffffff; /* Text color for header */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0.5em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
         }
-
-        .ribbon {
-            background-color: #004080; /* Darker blue for ribbon */
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        h2, h3 {
+            color: #0056a1;
+            margin-top: 1.5em;
+            border-bottom: 2px solid #e1e1e1;
+            padding-bottom: 0.3em;
         }
-
-        .ribbon a {
-            color: #ffffff;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 0 10px;
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
-
-        .ribbon a:hover {
-            background-color: #0077cc; /* Hover effect */
-        }
-
-        .container {
-            max-width: 800px; /* Set maximum width */
-            margin: 20px auto; /* Center container */
-            padding: 20px;
-            background-color: #ffffff; /* White background for content */
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            color: #0077cc; /* Dark blue for section titles */
-            font-size: 1.8em; /* Larger section titles */
-            border-bottom: 2px solid #0077cc; /* Underline with same color */
-            padding-bottom: 5px;
-            margin-bottom: 15px; /* Space between title and content */
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #0077cc; /* Footer background color */
-            color: #ffffff; /* Text color for footer */
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        ul {
-            list-style-type: disc; /* Style for unordered lists */
-            padding-left: 20px; /* Indent for lists */
-        }
-
-        p {
-            margin-bottom: 15px; /* Space between paragraphs */
-        }
-
         a {
-            color: #0077cc; /* Links color */
-            text-decoration: none; /* Remove underline from links */
+            color: #0056a1;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
         }
-
         a:hover {
-            text-decoration: underline; /* Underline on hover */
+            color: #003366;
+            text-decoration: underline;
+        }
+        .ribbon {
+            background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Ftheaisummer.com%2Fgnn-architectures%2F&psig=AOvVaw0DT727yWjSn1fd7DbX_30N&ust=1728167373690000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOi77LTj9YgDFQAAAAAdAAAAABAT') no-repeat center center; /* Use your image URL */
+            background-size: cover; /* Ensures the image covers the entire header */
+            color: white; /* Change text color if needed for visibility */
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+        .ribbon ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .ribbon li {
+            display: inline;
+            margin: 0 15px;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        .section {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #888;
+            border-top: 1px solid #e1e1e1;
+            padding-top: 10px;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            .section {
+                padding: 15px;
+            }
+            .ribbon li {
+                display: block;
+                margin: 5px 0;
+            }
         }
     </style>
+    <script>
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </head>
-
 <body>
 
     <div class="ribbon">
-        <a href="#header">Header</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#publications">Publications</a>
-        <a href="#service">Professional Service</a>
-        <a href="#research">Research Interests</a>
+        <ul>
+            <li><a onclick="scrollToSection('education')">Education</a></li>
+            <li><a onclick="scrollToSection('certifications')">Certifications</a></li>
+            <li><a onclick="scrollToSection('experience')">Experience</a></li>
+            <li><a onclick="scrollToSection('skills')">Skills</a></li>
+            <li><a onclick="scrollToSection('publications')">Publications</a></li>
+            <li><a onclick="scrollToSection('professional-service')">Professional Service</a></li>
+            <li><a onclick="scrollToSection('research-interests')">Research Interests</a></li>
+        </ul>
     </div>
 
-    <header id="header">
-        <h1>Astrit Tola</h1>
-        <p>
-            <a href="mailto:astrit.tola@utdallas.edu">astrit.tola@utdallas.edu</a> • 
-            <a href="https://www.linkedin.com/in/astrit-tola-bb2836b5">LinkedIn</a> • 
-            <a href="https://github.com/AstritTola">GitHub</a>
-        </p>
-    </header>
-
-    <div class="container">
-        <div id="education" class="section">
-            <h2 class="section-title">Education</h2>
-            <p><strong>University of Texas at Dallas</strong> (Expected 2025)<br>
-            PhD in Mathematics</p>
-            <p><strong>University of Texas at Dallas</strong> (Expected 2024)<br>
-            MS in Mathematics, specializing in Data Science</p>
-            <p><strong>Middle East Technical University</strong> (June 2018)<br>
-            BS in Mathematics, Graduated with Honors</p>
-        </div>
-
-        <div id="certifications" class="section">
-            <h2 class="section-title">Certifications</h2>
-            <ul>
-                <li>Python Data Structures, Coursera</li>
-                <li>Programming for Everybody (Getting Started with Python), Coursera</li>
-            </ul>
-        </div>
-
-        <div id="experience" class="section">
-            <h2 class="section-title">Experience</h2>
-            <p><strong>University of Texas at Dallas, Teaching Assistant</strong> (January 2021 - Present)<br>
-            Through customized instruction and assistance, I have effectively overseen mathematics courses, resulting in significant improvements in student comprehension and academic performance.</p>
-            <p><strong>University of Texas at Dallas, Research Assistant</strong> (May 2023 - Aug 2023, May 2024 - Aug 2024)<br>
-            I conducted research in Machine Learning, Topological Data Analysis, Graph Neural Networks, and drug discovery, collaborating with faculty and peers on innovative projects.</p>
-            <p><strong>Tubitak, Ankara, Turkey, Bursiyer</strong> (Dec 2019 - May 2020)<br>
-            I performed advanced research on Dynamical Systems and Chaos Theory.</p>
-        </div>
-
-        <div id="skills" class="section">
-            <h2 class="section-title">Skills</h2>
-            <p><strong>Technical Skills:</strong> Python, PyTorch, Matlab, LaTeX, Microsoft Office, C++, R, Graph Neural Networks, Machine Learning, Topological Data Analysis, SQL (Beginner)</p>
-            <p><strong>Soft Skills:</strong> Communication, Teamwork, Problem-Solving, Teaching</p>
-        </div>
-
-        <div id="publications" class="section">
-            <h2 class="section-title">Publications</h2>
-            <ul>
-                <li>A. Tola, M. Candas, D. Winkler, B. Coskunuzer. <em>An Integrated Approach for Phytopathogen Antimicrobial Development.</em>, work in progress.</li>
-                <li>A. Tola, K. Shamsi, C. G. Akcora, B. Coskunuzer. <em>X-Pool: Executive Pooling for Graph Representation.</em>, work in progress.</li>
-                <li>A. Tola, MD J. Uddin, C. G. Akcora, B. Coskunuzer. <em>EdAtt: Edge Representation Learning for Link Prediction.</em>, work in progress.</li>
-                <li>MD J. Uddin, A. Tola, C. G. Akcora, B. Coskunuzer. <em>Wise-GNN: Enhancing GNNs with Wise Embeddings.</em>, submitted.</li>
-                <li>MD J. Uddin, A. Tola, C. G. Akcora, B. Coskunuzer. <em>ClassContrast: Bridging the Spatial and Contextual Gaps for Node Representations.</em>, submitted, <a href="https://arxiv.org/pdf/2410.02158">arxiv.org/pdf/2410.02158</a>.</li>
-                <li>A. Tola, J. A. Myrich, B. Coskunuzer. <em>PROXI: Challenging the GNNs for Link Prediction.</em>, submitted, <a href="https://arxiv.org/pdf/2410.01802">arxiv.org/pdf/2410.01802</a>.</li>
-                <li>A. Tola, F. M. Taiwo, C. G, Akcora, B. Coskunuzer. <em>TopER: Topological Embeddings in Graph Representation Learning.</em>, submitted, <a href="https://arxiv.org/pdf/2410.01778">arxiv.org/pdf/2410.01778</a>.</li>
-                <li>M. Akhmet, M. O. Fen, A. Tola. <em>A Numerical Analysis of Poincaré Chaos.</em>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022243722005332">Numerical Analysis, 2023</a>.</li>
-                <li>A. Tola, J. Myrich, B. Coskunuzer. <em>Strange Non-Chaotic Attractors in Dynamical Systems.</em>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022243723005328">Numerical Analysis, 2023</a>.</li>
-                <li>A. Tola, M. O. Fen, M. Akhmet. <em>Unpredictable Strings.</em>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167278923005976">Discrete Applied Mathematics, 2023</a>.</li>
-            </ul>
-        </div>
-
-        <div id="service" class="section">
-            <h2 class="section-title">Professional Service</h2>
-            <ul>
-                <li>Poster Presenter, TACCSTER 2024</li>
-                <li>Reviewer, KDD 2024</li>
-                <li>Reviewer, ACML 2024</li>
-                <li>Speaker, Graduate Students Workshop 2023</li>
-                <li>Speaker, SIAM TX-LA 2023</li>
-                <li>Organizer, 64th Texas Geometry & Topology Conference</li>
-            </ul>
-        </div>
-
-        <div id="research" class="section">
-            <h2 class="section-title">Research Interests</h2>
-            <ul>
-                <li>Graph Neural Networks (GNNs)</li>
-                <li>Topological Data Analysis (TDA)</li>
-                <li>Feature Engineering</li>
-                <li>Link Prediction</li>
-                <li>Drug Discovery</li>
-            </ul>
-        </div>
+    <h1>Astrit Tola</h1>
+    <div class="contact-info">
+        <a href="mailto:astrit.tola@utdallas.edu">astrit.tola@utdallas.edu</a> • 
+        <a href="https://www.linkedin.com/in/astrit-tola-bb2836b5">LinkedIn</a> • 
+        <a href="https://github.com/AstritTola">GitHub</a>
     </div>
 
-    <footer>
-        <p>© 2024 Astrit Tola</p>
-    </footer>
+    <div class="section" id="education">
+        <h2>Education</h2>
+        <p><strong>University of Texas at Dallas</strong> - PhD in Mathematics (Expected 2025)</p>
+        <p><strong>University of Texas at Dallas</strong> - MS in Mathematics, specializing in Data Science (Expected 2024)</p>
+        <p><strong>Middle East Technical University</strong> - BS in Mathematics, Graduated with Honors (June 2018)</p>
+        
+    </div>
+
+    <div class="section" id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Python Data Structures, Coursera</li>
+            <li>Programming for Everybody (Getting Started with Python), Coursera</li>
+        </ul>
+    </div>
+
+    <div class="section" id="experience">
+        <h2>Experience</h2>
+        <p><strong>University of Texas at Dallas, Teaching Assistant</strong> (January 2021 - Present)</p>
+        <p><strong>University of Texas at Dallas, Research Assistant</strong> (May 2023 - Aug 2023, May 2024 - Aug 2024)</p>
+        <ul>
+            <li>Conducted research on Machine Learning, Topological Data Analysis, and Graph Neural Networks.</li>
+            <li>Collaborated with faculty, peers, and undergraduate students on innovative research projects.</li>
+            <li>Conducted research in the drug discovery field.</li>
+        </ul>
+        <p><strong>Tubitak, Ankara, Turkey, Bursiyer</strong> (Dec 2019 - May 2020)</p>
+        <ul>
+            <li>Conducted research on Dynamical Systems and Chaos Theory.</li>
+            <li>Analyzed complex systems and developed theoretical models.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="skills">
+        <h2>Skills</h2>
+        <p><strong>Technical Skills:</strong> Python, PyTorch, Matlab, LaTeX, Microsoft Office, C++, R, Graph Neural Networks, Machine Learning, Topological Data Analysis, SQL (Beginner)</p>
+        <p><strong>Soft Skills:</strong> Communication, Teamwork, Problem-Solving, Teaching</p>
+    </div>
+
+    <div class="section" id="publications">
+        <h2>Publications</h2>
+        <ul>
+            <li>A. Tola, K. Shamsi, C. G. Akcora, B. Coskunuzer. <em>"X-Pool: Executive Pooling for Graph Representation."</em>, work in progress</li>
+            <li>A. Tola, MD J. Uddin, N. Robinson, C. G. Akcora, B. Coskunuzer. <em>"EdAtt: Edge Representation Learning for Link Prediction."</em>, work in progress</li>
+            <li>MD J. Uddin, A. Tola, C. G. Akcora, B. Coskunuzer. <em>"Wise-GNN: Enhancing GNNs with Wise Embeddings."</em>, work in progress</li>
+            <li>MD J. Uddin, A. Tola, C. G. Akcora, B. Coskunuzer. <em>"ClassContrast: Bridging the Spatial and Contextual Gaps in Graphs."</em>, work in progress</li>
+            <li>A. Tola, M. Akhmet. <em>"A New Approach to Strange Non-Chaotic Attractors."</em> Entropy, 25(2), 280 (2023). DOI:10.3390/e25020280</li>
+        </ul>
+    </div>
+
+    <div class="section" id="professional-service">
+        <h2>Professional Service</h2>
+        <ul>
+            <li>Student Organizer, 64th Texas Geometry & Topology Conference (2024)</li>
+            <li>Reviewer, KDD 2024</li>
+            <li>Reviewer, ACML 2024</li>
+            <li>Speaker, Graduate Students Workshop 2023</li>
+            <li>Presented at SIAM TX-LA 2023</li>
+        </ul>
+    </div>
+
+    <div class="section" id="research-interests">
+        <h2>Research Interests</h2>
+        <p>Graph Classification, Graph Neural Networks, Topological Data Analysis, Feature Engineering, Multipersistence on Drug Discovery, Applications in Personalized Medicine, Cybersecurity, and Large-Scale Social Network Analysis.</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Astrit Tola. All Rights Reserved.</p>
+    </div>
 
 </body>
-
 </html>
