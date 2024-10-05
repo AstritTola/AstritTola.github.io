@@ -16,19 +16,24 @@
         }
 
         header {
-            background-color: #0d6efd;
-            color: white;
-            padding: 10px 20px;
+            position: relative;
             text-align: center;
+            padding: 30px 20px; /* Increased padding for better spacing */
+            background-color: #ffffff; /* White background for header */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
         }
 
         .ribbon {
-            background-color: #0d6efd;
+            background-color: #4f4f4f; /* Dark gray background for the ribbon */
             padding: 10px 0;
             display: flex;
             justify-content: center;
-            position: relative;
+            position: absolute; /* Positioning the ribbon over the header */
+            top: 10px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%); /* Centering the ribbon */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1; /* Ensures the ribbon is above the header */
         }
 
         .ribbon a {
@@ -42,7 +47,7 @@
         }
 
         .ribbon a:hover {
-            background-color: #0056b3;
+            background-color: #7d7d7d; /* Lighter gray on hover */
         }
 
         .container {
@@ -54,20 +59,21 @@
         }
 
         .section-title {
-            color: #0d6efd;
+            color: #333; /* Dark text color for section titles */
             font-size: 1.5em;
-            border-bottom: 2px solid #0d6efd;
+            border-bottom: 2px solid #333; /* Dark underline */
             padding-bottom: 5px;
         }
 
         footer {
             text-align: center;
             padding: 10px 0;
-            background-color: #0d6efd;
-            color: white;
+            background-color: #ffffff; /* White background for footer */
+            color: #333;
             position: relative;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
         }
     </style>
 </head>
@@ -75,6 +81,15 @@
 <body>
 
     <header>
+        <div class="ribbon">
+            <a href="#education">Education</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#publications">Publications</a>
+            <a href="#service">Professional Service</a>
+            <a href="#research">Research Interests</a>
+        </div>
         <h1>Astrit Tola</h1>
         <p>
             <a href="mailto:astrit.tola@utdallas.edu">astrit.tola@utdallas.edu</a> • 
@@ -82,16 +97,6 @@
             <a href="https://github.com/AstritTola">GitHub</a>
         </p>
     </header>
-
-    <div class="ribbon">
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#publications">Publications</a>
-        <a href="#service">Professional Service</a>
-        <a href="#research">Research Interests</a>
-    </div>
 
     <div class="container">
         <div id="education" class="section">
@@ -140,7 +145,7 @@
                 <li>A. Tola, F. M. Taiwo, C. G, Akcora, B. Coskunuzer. <em>TopER: Topological Embeddings in Graph Representation Learning.</em>, submitted, <a href="https://arxiv.org/pdf/2410.01778">arxiv.org/pdf/2410.01778</a>.</li>
                 <li>M. Akhmet, M. O. Fen, A. Tola. <em>A Numerical Analysis of Poincaré Chaos.</em> Discontinuity, Nonlinearity, and Complexity, 12(1) (2023), 183-195.</li>
                 <li>M. Akhmet, M. O. Fen, A. Tola. <em>Strange Non-Chaotic Attractors with Unpredictable Trajectories.</em> Journal of Vibration Testing and System Dynamics, 6(3) (2022), 317-327, <a href="https://arxiv.org/pdf/2110.15805">arxiv.org/pdf/2110.15805</a>.</li>
-                <li>M. Akhmet, A. Tola. <em>Unpredictable Strings.</em> Kazakh Mathematical Journal, 20(3) (2020), 16-22, <a href="https://arxiv.org/pdf/2006.08523">arxiv.org/pdf/2006.08523</a>.</li>
+                <li>M. Akhmet, A. Tola. <em>Unpredictable Strings.</em> Kazakh Mathematical Journal, 20(3) (2020), 16-23.</li>
             </ul>
         </div>
 
