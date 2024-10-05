@@ -22,21 +22,24 @@
             text-align: center;
         }
 
-        nav {
+        .ribbon {
+            background-color: #0d6efd;
+            padding: 10px 0;
             display: flex;
             justify-content: center;
-            margin: 10px 0;
+            position: relative;
         }
 
-        nav a {
+        .ribbon a {
             color: white;
-            padding: 10px 20px;
+            padding: 10px 15px;
             text-decoration: none;
             border-radius: 5px;
+            margin: 0 10px;
             transition: background-color 0.3s;
         }
 
-        nav a:hover {
+        .ribbon a:hover {
             background-color: #0056b3;
         }
 
@@ -78,7 +81,7 @@
         </p>
     </header>
 
-    <nav>
+    <div class="ribbon">
         <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
         <a href="#experience">Experience</a>
@@ -86,7 +89,7 @@
         <a href="#publications">Publications</a>
         <a href="#service">Professional Service</a>
         <a href="#research">Research Interests</a>
-    </nav>
+    </div>
 
     <div class="container">
         <div id="education" class="section">
@@ -156,7 +159,6 @@
             <ul>
                 <li>Graph Neural Networks (GNNs)</li>
                 <li>Topological Data Analysis (TDA)</li>
-                <li>Machine Learning Applications</li>
                 <li>Feature Engineering</li>
                 <li>Link Prediction</li>
                 <li>Drug Discovery</li>
@@ -169,4 +171,5 @@
     </footer>
 
 </body>
+
 </html>
