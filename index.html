@@ -24,14 +24,19 @@
         }
 
         .ribbon {
+            background-color: #4f4f4f; /* Dark gray background for the ribbon */
             padding: 10px 0;
             display: flex;
             justify-content: center;
+            position: relative; /* Changed to relative */
+            top: 0; /* Adjust as needed */
+            margin-bottom: 20px; /* Space below the ribbon */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1; /* Ensures the ribbon is above the header */
         }
 
         .ribbon a {
-            color: #4f4f4f; /* Dark color for text */
+            color: white;
             padding: 10px 15px;
             text-decoration: none;
             border-radius: 5px;
@@ -74,15 +79,6 @@
 
 <body>
 
-    <header>
-        <h1>Astrit Tola</h1>
-        <p>
-            <a href="mailto:astrit.tola@utdallas.edu">astrit.tola@utdallas.edu</a> • 
-            <a href="https://www.linkedin.com/in/astrit-tola-bb2836b5">LinkedIn</a> • 
-            <a href="https://github.com/AstritTola">GitHub</a>
-        </p>
-    </header>
-
     <div class="ribbon">
         <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
@@ -92,6 +88,15 @@
         <a href="#service">Professional Service</a>
         <a href="#research">Research Interests</a>
     </div>
+
+    <header>
+        <h1>Astrit Tola</h1>
+        <p>
+            <a href="mailto:astrit.tola@utdallas.edu">astrit.tola@utdallas.edu</a> • 
+            <a href="https://www.linkedin.com/in/astrit-tola-bb2836b5">LinkedIn</a> • 
+            <a href="https://github.com/AstritTola">GitHub</a>
+        </p>
+    </header>
 
     <div class="container">
         <div id="education" class="section">
@@ -147,28 +152,23 @@
         <div id="service" class="section">
             <h2 class="section-title">Professional Service</h2>
             <ul>
-                <li>Poster Presenter, TACCSTER 2024</li>
-                <li>Reviewer, KDD 2024</li>
-                <li>Reviewer, ACML 2024</li>
-                <li>Speaker, Graduate Students Workshop 2023</li>
+                <li>Reviewer for KDD 2024</li>
+                <li>Reviewer for ACML 2024</li>
                 <li>Student Organizer, 64th Texas Geometry & Topology Conference</li>
-                <li>Presentation, SIAM TX-LA 2023</li>
+                <li>Speaker at Graduate Students Workshop 2023</li>
             </ul>
         </div>
 
         <div id="research" class="section">
             <h2 class="section-title">Research Interests</h2>
-            <ul>
-                <li>Synergy between Graph Neural Networks and advanced machine learning techniques.</li>
-                <li>Developing scalable and interpretable Graph Neural Network architectures.</li>
-                <li>Applications of Graph Neural Networks and Topological Data Analysis in personalized medicine, cybersecurity, and large-scale social network analysis.</li>
-                <li>Link prediction: predicting the existence of links through feature engineering.</li>
-            </ul>
+            <p>
+                My research encompasses the integration of Topological Data Analysis (TDA) with Graph Neural Network (GNN) models, investigating the synergy between GNNs and advanced machine learning techniques, developing scalable and interpretable GNN architectures, and applying GNNs and TDA to emerging domains such as personalized medicine, cybersecurity, and large-scale social network analysis.
+            </p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 Astrit Tola. All rights reserved.</p>
+        <p>© 2024 Astrit Tola</p>
     </footer>
 
 </body>
