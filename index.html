@@ -1,118 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrit Tola - Curriculum Vitae</title>
-    <link href="https://fonts.googleapis.com/css2?family=Palatino+Linotype&family=Helvetica:wght@400&display=swap" rel="stylesheet">
+    <title>Astrit Tola's CV</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: 'Helvetica', sans-serif;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            color: #333;
+            background-color: #f9f9f9;
         }
+
         header {
-            background-color: #0066cc;
-            color: #ffffff;
-            padding: 20px;
+            background-color: #0d6efd;
+            color: white;
+            padding: 10px 20px;
             text-align: center;
         }
-        h1 {
-            margin: 0;
-        }
-        h2 {
-            color: #0066cc;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-        a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+
         nav {
-            float: left;
-            width: 25%;
-            height: 100%;
-            background: #343a40;
-            padding: 15px;
-            color: #ffffff;
-            position: fixed;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
         }
-        nav h2 {
-            color: #ffffff;
-        }
+
         nav a {
-            color: #ffffff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
+
         nav a:hover {
-            color: #007bff;
+            background-color: #0056b3;
         }
+
         .container {
-            margin-left: 25%;
-            padding: 20px;
+            margin: 20px;
         }
+
         .section {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
         }
+
         .section-title {
-            border-bottom: 2px solid #0066cc;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
+            color: #0d6efd;
+            font-size: 1.5em;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 5px;
         }
+
         footer {
             text-align: center;
-            padding: 10px;
-            background-color: #343a40;
-            color: #ffffff;
+            padding: 10px 0;
+            background-color: #0d6efd;
+            color: white;
             position: relative;
-            clear: both;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
+
 <body>
 
     <header>
         <h1>Astrit Tola</h1>
         <p>
-            <a href="mailto:astrit.tola@utdallas.edu">astrit.tola@utdallas.edu</a> &bull; 
-            <a href="https://www.linkedin.com/in/astrit-tola-bb2836b5">linkedin.com/in/astrit-tola-bb2836b5</a> &bull; 
-            <a href="https://github.com/AstritTola">github.com/AstritTola</a>
+            <a href="mailto:astrit.tola@utdallas.edu">astrit.tola@utdallas.edu</a> • 
+            <a href="https://www.linkedin.com/in/astrit-tola-bb2836b5">LinkedIn</a> • 
+            <a href="https://github.com/AstritTola">GitHub</a>
         </p>
     </header>
 
     <nav>
-        <h2>Sections</h2>
-        <ul>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#service">Professional Service</a></li>
-            <li><a href="#research">Research Interests</a></li>
-        </ul>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#publications">Publications</a>
+        <a href="#service">Professional Service</a>
+        <a href="#research">Research Interests</a>
     </nav>
 
     <div class="container">
         <div id="education" class="section">
             <h2 class="section-title">Education</h2>
-            <p><strong>University of Texas at Dallas</strong> <em>(Expected 2025)</em><br>
+            <p><strong>University of Texas at Dallas</strong> (Expected 2025)<br>
             PhD in Mathematics</p>
-            <p><strong>University of Texas at Dallas</strong> <em>(Expected 2024)</em><br>
+            <p><strong>University of Texas at Dallas</strong> (Expected 2024)<br>
             MS in Mathematics, specializing in Data Science</p>
-            <p><strong>Middle East Technical University</strong> <em>(June 2018)</em><br>
+            <p><strong>Middle East Technical University</strong> (June 2018)<br>
             BS in Mathematics, Graduated with Honors</p>
         </div>
 
@@ -126,22 +109,18 @@
 
         <div id="experience" class="section">
             <h2 class="section-title">Experience</h2>
-            <p><strong>University of Texas at Dallas</strong>, Teaching Assistant <em>(January 2021 - Present)</em><br>
-            Oversaw mathematics courses with customized instruction, leading to significant improvements in student comprehension and academic performance.</p>
-            
-            <p><strong>University of Texas at Dallas</strong>, Research Assistant <em>(May 2023 - Aug 2023, May 2024 - Aug 2024)</em><br>
-            Conducted research in Machine Learning, Topological Data Analysis, Graph Neural Networks, and drug discovery, collaborating on innovative projects.</p>
-            
-            <p><strong>Tubitak</strong>, Ankara, Turkey, Bursiyer <em>(Dec 2019 - May 2020)</em><br>
-            Performed advanced research on Dynamical Systems and Chaos Theory.</p>
+            <p><strong>University of Texas at Dallas, Teaching Assistant</strong> (January 2021 - Present)<br>
+            Through customized instruction and assistance, I have effectively overseen mathematics courses, resulting in significant improvements in student comprehension and academic performance.</p>
+            <p><strong>University of Texas at Dallas, Research Assistant</strong> (May 2023 - Aug 2023, May 2024 - Aug 2024)<br>
+            I conducted research in Machine Learning, Topological Data Analysis, Graph Neural Networks, and drug discovery, collaborating with faculty and peers on innovative projects.</p>
+            <p><strong>Tubitak, Ankara, Turkey, Bursiyer</strong> (Dec 2019 - May 2020)<br>
+            I performed advanced research on Dynamical Systems and Chaos Theory.</p>
         </div>
 
         <div id="skills" class="section">
             <h2 class="section-title">Skills</h2>
-            <strong>Technical Skills:</strong>
-            <p>Python, PyTorch, Matlab, LaTeX, Microsoft Office, C++, R, Graph Neural Networks, Machine Learning, Topological Data Analysis, SQL (Beginner)</p>
-            <strong>Soft Skills:</strong>
-            <p>Communication, Teamwork, Problem-Solving, Teaching</p>
+            <p><strong>Technical Skills:</strong> Python, PyTorch, Matlab, LaTeX, Microsoft Office, C++, R, Graph Neural Networks, Machine Learning, Topological Data Analysis, SQL (Beginner)</p>
+            <p><strong>Soft Skills:</strong> Communication, Teamwork, Problem-Solving, Teaching</p>
         </div>
 
         <div id="publications" class="section">
@@ -156,29 +135,31 @@
                 <li>A. Tola, F. M. Taiwo, C. G, Akcora, B. Coskunuzer. <em>TopER: Topological Embeddings in Graph Representation Learning.</em>, submitted, <a href="https://arxiv.org/pdf/2410.01778">arxiv.org/pdf/2410.01778</a>.</li>
                 <li>M. Akhmet, M. O. Fen, A. Tola. <em>A Numerical Analysis of Poincaré Chaos.</em> Discontinuity, Nonlinearity, and Complexity, 12(1) (2023), 183-195.</li>
                 <li>M. Akhmet, M. O. Fen, A. Tola. <em>Strange Non-Chaotic Attractors with Unpredictable Trajectories.</em> Journal of Vibration Testing and System Dynamics, 6(3) (2022), 317-327, <a href="https://arxiv.org/pdf/2110.15805">arxiv.org/pdf/2110.15805</a>.</li>
-                <li>M. Akhmet, A. Tola. <em>Unpredictable Strings.</em> Kazakh Mathematical Journal, 20(3) (2020), 16-22, <a href="https://arxiv.org/pdf/2006.01404">arxiv.org/pdf/2006.01404</a>.</li>
+                <li>M. Akhmet, A. Tola. <em>Unpredictable Strings.</em> Kazakh Mathematical Journal, 20(3) (2020), 16-22, <a href="https://arxiv.org/pdf/2006.08523">arxiv.org/pdf/2006.08523</a>.</li>
             </ul>
         </div>
 
         <div id="service" class="section">
             <h2 class="section-title">Professional Service</h2>
             <ul>
-                <li>Reviewer for KDD 2024</li>
-                <li>Reviewer for ACML 2024</li>
-                <li>Student Organizer, 64th Texas Geometry & Topology Conference</li>
+                <li>Poster Presenter, TACCSTER 2024</li>
+                <li>Reviewer, KDD 2024</li>
+                <li>Reviewer, ACML 2024</li>
                 <li>Speaker, Graduate Students Workshop 2023</li>
+                <li>Speaker, SIAM TX-LA 2023</li>
+                <li>Student Organizer, 64th Texas Geometry & Topology Conference</li>
             </ul>
         </div>
 
         <div id="research" class="section">
             <h2 class="section-title">Research Interests</h2>
             <ul>
-                <li>Graph Neural Networks and their applications in link prediction</li>
-                <li>Topological Data Analysis in drug discovery</li>
-                <li>Feature engineering for improving model performance</li>
-                <li>Exploring the synergy between GNNs and advanced machine learning techniques</li>
-                <li>Developing scalable and interpretable GNN architectures</li>
-                <li>Application of GNNs in emerging domains such as personalized medicine and cybersecurity</li>
+                <li>Graph Neural Networks (GNNs)</li>
+                <li>Topological Data Analysis (TDA)</li>
+                <li>Machine Learning Applications</li>
+                <li>Feature Engineering</li>
+                <li>Link Prediction</li>
+                <li>Drug Discovery</li>
             </ul>
         </div>
     </div>
@@ -189,4 +170,3 @@
 
 </body>
 </html>
-
