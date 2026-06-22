@@ -1,196 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research | Astrit Tola — TopoML&amp;AI @ FSU</title>
-  <meta name="description" content="Research projects by Astrit Tola — topology-aware machine learning, graph foundation models, drug discovery, and cybersecurity knowledge graphs.">
-
-  https://fonts.googleapis.com
-  https://fonts.gstatic.com
-  https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  assets/css/style.css
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research | Astrit Tola — TopoML&amp;AI @ FSU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      index.html
-        Astrit Tola
-        <small>TopoML&amp;AI @ FSU</small>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li>index.html</li>
-        <li>research.html</li>
-        <li>publications.html</li>
-        <li>teaching.html</li>
-        <li>talks.html</li>
-        <li>cv.html</li>
-        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button></li>
-      </ul>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">Astrit Tola<small>TopoML&amp;AI @ FSU</small></a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><button class="theme-toggle" id="themeToggle">🌙</button></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<section>
+  <h2 class="section-title">Research Overview</h2>
+  <p>My research develops <strong>topology-aware machine learning</strong> methods that combine ideas from algebraic topology, geometry, and modern deep learning. I am especially interested in problems where graph structure and higher-order interactions matter — molecules, biological networks, biomedical knowledge graphs, and cybersecurity knowledge graphs.</p>
+  <p style="margin-top:1rem;">Three guiding questions drive the work:</p>
+  <ul style="margin:1rem 0 1rem 1.5rem; line-height:1.9; color:var(--text);">
+    <li><strong>How can topology serve as an inductive bias</strong> for graph neural networks and Transformers?</li>
+    <li><strong>What are the right topological summaries</strong> for structured scientific data — molecules, pathways, knowledge graphs?</li>
+    <li><strong>How do we scale</strong> persistence-based methods to real-world AI systems with millions of nodes and edges?</li>
+  </ul>
+  <p>The umbrella for these efforts is the <strong>TopoML&amp;AI @ FSU</strong> group, which I lead at the Department of Mathematics. Our work has appeared in <strong>NeurIPS</strong>, <strong>ICLR</strong>, <strong>TMLR</strong>, and journals in computational biology and applied mathematics. <em>(Group website coming soon.)</em></p>
+</section>
+
+<section>
+  <h2 class="section-title">Research Themes</h2>
+  <div class="card-grid">
+    <div class="card"><h3>🧮 Topological Data Analysis</h3><p>Persistent homology, Euler characteristic curves, filtration-based descriptors, and stable topological summaries as inductive biases for ML.</p></div>
+    <div class="card"><h3>🕸️ Graph Classification &amp; Embeddings</h3><p>Topology-aware Transformers and embeddings for graph-level tasks — <strong>TopoFormer</strong>, <strong>TopER</strong>.</p></div>
+    <div class="card"><h3>📍 Node Classification</h3><p>Spatial and contextual coordinates for node-level prediction — <strong>SCNode</strong>.</p></div>
+    <div class="card"><h3>🔗 Link Prediction</h3><p>Strong proximity-based baselines and dual-perspective methods on graphs and knowledge graphs — <strong>PROXI</strong>, <strong>DuoLink</strong>.</p></div>
+    <div class="card"><h3>🧬 AI for Drug Discovery &amp; Biology</h3><p>Topological ML for identifying molecular compounds — including compounds targeting bacterial propionate metabolism.</p></div>
+    <div class="card"><h3>🛡️ AI for Cybersecurity</h3><p>Topology-aware retrieval and correlation across disparate cybersecurity knowledge graphs — <strong>TopoCorr-KG</strong> (ReliaQuest Innovation Challenge).</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Current Projects</h2>
+  <div class="card-grid">
+
+    <div class="card">
+      <h3><a href="topocorr-kg.html">TopoCorr-KG</a><small>2026 – present · ReliaQuest</small></h3>
+      <p><em>Topology-Aware Retrieval and Correlation Across Disparate Cybersecurity Knowledge Graphs.</em> AI-driven methods for retrieving and correlating information across fragmented cybersecurity knowledge graphs (MITRE ATT&amp;CK, CVE/NVD, internal SOC graphs) to improve cyber threat analysis and decision-making.</p>
+      <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);"><strong>PI:</strong> A. Tola · <strong>Co-PI:</strong> M. Asllani · <strong>GTA:</strong> Ece Karacam · <strong>UTA:</strong> Sebastian Powers</p>
     </div>
-  </nav>
 
-  <main>
+    <div class="card">
+      <h3><a href="topoformer.html">TopoFormer</a><small>ICLR 2026</small></h3>
+      <p><em>Topology Meets Attention for Graph Learning.</em> A lightweight, scalable Transformer framework that encodes graph topology into ordered token sequences via a novel <strong>Topo-Scan</strong> module. Bypasses persistence diagrams, comes with stability guarantees, and matches state-of-the-art on graph classification.</p>
+      <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);">With MD J. Uddin (★ equal contribution), C. G. Akcora, B. Coskunuzer.</p>
+    </div>
 
-    <!-- ===== Research Overview ===== -->
-    <section>
-      <h2 class="section-title">Research Overview</h2>
-      <p>My research develops <strong>topology-aware machine learning</strong> methods that combine ideas from algebraic topology, geometry, and modern deep learning. I am especially interested in problems where graph structure and higher-order interactions matter — molecules, biological networks, biomedical knowledge graphs, and cybersecurity knowledge graphs.</p>
+    <div class="card">
+      <h3><a href="toper.html">TopER</a><small>NeurIPS 2025</small></h3>
+      <p><em>Topological Embeddings in Graph Representation Learning.</em> An interpretable, low-dimensional (2D) graph embedding grounded in topology. TopER fits a line to the (nodes, edges) trajectory across a filtration, producing a <strong>(pivot, growth)</strong> descriptor that scales to 100K-node graphs.</p>
+      <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);">With F. M. Taiwo, C. G. Akcora, B. Coskunuzer. <a href="https://astrittola.github.io/TopER.github.io/" target="_blank" rel="noopener">Project page</a>.</p>
+    </div>
 
-      <p style="margin-top: 1rem;">Three guiding questions drive the work:</p>
-      <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.9; color: var(--text);">
-        <li><strong>How can topology serve as an inductive bias</strong> for graph neural networks and Transformers?</li>
-        <li><strong>What are the right topological summaries</strong> for structured scientific data — molecules, pathways, knowledge graphs?</li>
-        <li><strong>How do we scale</strong> persistence-based methods to real-world AI systems with millions of nodes and edges?</li>
-      </ul>
+    <div class="card">
+      <h3>SCNode<small>TMLR 2025 · Node Classification</small></h3>
+      <p><em>Spatial and Contextual Coordinates for Graph Representation Learning.</em> A node-embedding framework that jointly captures spatial geometry and contextual neighborhood signal for richer node-level representations.</p>
+      <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);">With MD J. Uddin, C. G. Akcora, B. Coskunuzer. <a href="https://openreview.net/pdf?id=wdcdKeFbfQ" target="_blank" rel="noopener">PDF</a>.</p>
+    </div>
 
-      <p>The umbrella for these efforts is the <strong>TopoML&amp;AI @ FSU</strong> group, which I lead at the Department of Mathematics. Our work has appeared in <strong>NeurIPS</strong>, <strong>ICLR</strong>, <strong>TMLR</strong>, and journals in computational biology and applied mathematics. <em>(Group website coming soon.)</em></p>
-    </section>
+    <div class="card">
+      <h3>PROXI<small>TMLR 2025 · Link Prediction</small></h3>
+      <p><em>Challenging the GNNs for Link Prediction.</em> A surprisingly strong proximity-based baseline that exposes how simple structural features can rival — and often beat — more complex GNNs on link prediction benchmarks.</p>
+      <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);">With J. A. Myrich, B. Coskunuzer. <a href="https://openreview.net/pdf?id=u9EHndbiVw" target="_blank" rel="noopener">PDF</a>.</p>
+    </div>
 
-    <!-- ===== Research Themes ===== -->
-    <section>
-      <h2 class="section-title">Research Themes</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>🧮 Topological Data Analysis</h3>
-          <p>Persistent homology, Euler characteristic curves, filtration-based descriptors, and stable topological summaries as inductive biases for ML.</p>
-        </div>
-        <div class="card">
-          <h3>🕸️ Graph Representation Learning</h3>
-          <p>Topology-aware GNNs and Transformers — including <strong>TopER</strong>, <strong>TopoFormer</strong>, <strong>SCNode</strong>, and <strong>PROXI</strong> — for classification, link prediction, and embedding.</p>
-        </div>
-        <div class="card">
-          <h3>🧬 AI for Drug Discovery &amp; Biology</h3>
-          <p>Graph-based deep learning for drug–target interaction (<strong>DuoLink</strong>), and topology-driven screening of compounds for bacterial metabolism.</p>
-        </div>
-        <div class="card">
-          <h3>🛡️ AI for Cybersecurity</h3>
-          <p>Topology-aware retrieval and correlation across disparate cybersecurity knowledge graphs (<strong>TopoCorr-KG</strong>, ReliaQuest Innovation Challenge).</p>
-        </div>
-      </div>
-    </section>
+    <div class="card">
+      <h3>Bacterial Propionate Metabolism<small>J. Mol. Graph. Model. 2026 · Drug Discovery</small></h3>
+      <p><em>Identification of Molecular Compounds Targeting Bacterial Propionate Metabolism with Topological Machine Learning.</em> Uses topological descriptors and ML to screen molecular compounds that disrupt bacterial propionate metabolic pathways.</p>
+      <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);">With S. Aziz, D. Zhabilov, D. Winkler, M. Candas, B. Coskunuzer. <a href="https://www.biorxiv.org/content/10.1101/2024.10.26.620439v1" target="_blank" rel="noopener">bioRxiv</a>.</p>
+    </div>
 
-    <!-- ===== Current Projects ===== -->
-    <section>
-      <h2 class="section-title">Current Projects</h2>
+    <div class="card">
+      <h3>DuoLink<small>In preparation · Link Prediction</small></h3>
+      <p><em>A Dual Perspective on Link Prediction via Line Graphs.</em> Reformulates link prediction by jointly modeling a graph and its line graph, capturing both node–node and edge–edge interactions for stronger predictive performance.</p>
+      <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);">With S. Kumar, B. Coskunuzer.</p>
+    </div>
 
-      <div class="card-grid">
+  </div>
+</section>
 
-        <!-- TopoCorr-KG -->
-        <div class="card">
-          <h3>topocorr-kg.html
-            <small style="color:var(--accent); display:block; font-weight:500; margin-top:0.1rem;">2026 – present · ReliaQuest Innovation Challenge</small>
-          </h3>
-          <p><em>Topology-Aware Retrieval and Correlation Across Disparate Cybersecurity Knowledge Graphs.</em> AI-driven methods for retrieving and correlating information across fragmented cybersecurity knowledge graphs (MITRE ATT&amp;CK, CVE/NVD, internal SOC graphs) to improve cyber threat analysis and decision-making.</p>
-          <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-soft);">
-            <strong>PI:</strong> A. Tola · <strong>Co-PI:</strong> M. Asllani · <strong>GTA:</strong> Ece Karacam · <strong>UTA:</strong> Sebastian Powers
-          </p>
-        </div>
+<section>
+  <h2 class="section-title">Team on TopoCorr-KG</h2>
+  <div class="news-item">
+    <h3>Research Assistants</h3>
+    <p>The <strong>TopoCorr-KG</strong> project at FSU is supported by <strong>Ece Karacam (GTA)</strong> and <strong>Sebastian Powers (UTA)</strong>. Learn more on the <a href="topocorr-kg.html">project page</a>.</p>
+    <p style="margin-top:.5rem;">Future students interested in topological ML, graph AI, or AI for cybersecurity / drug discovery are welcome to <a href="mailto:atola@fsu.edu">get in touch</a> about upcoming opportunities.</p>
+  </div>
+</section>
 
-        <!-- TopoFormer -->
-        <div class="card">
-          <h3>topoformer.html
-            <small style="color:var(--accent); display:block; font-weight:500; margin-top:0.1rem;">ICLR 2026</small>
-          </h3>
-          <p><em>Topology Meets Attention for Graph Learning.</em> A lightweight, scalable framework that encodes graph topology into ordered token sequences via a novel <strong>Topo-Scan</strong> module, then feeds them to a Transformer. Bypasses persistence diagrams, comes with stability guarantees, and matches state-of-the-art on graph classification.</p>
-          <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-soft);">
-            With MD J. Uddin (★ equal contribution), C. G. Akcora, B. Coskunuzer.
-          </p>
-        </div>
+<section>
+  <h2 class="section-title">Collaborators</h2>
+  <p>I am fortunate to collaborate closely with researchers across mathematics, computer science, and the life sciences:</p>
+  <ul style="margin:1rem 0 1rem 1.5rem; line-height:1.9; color:var(--text);">
+    <li><strong>Baris Coskunuzer</strong> — UT Dallas (Ph.D. advisor, ongoing collaborator on most projects)</li>
+    <li><strong>Malbor Asllani</strong> — Assistant Professor, Florida State University (Co-PI on TopoCorr-KG)</li>
+    <li><strong>Cuneyt Gurcan Akcora</strong> — University of Central Florida (TopER, TopoFormer, SCNode)</li>
+    <li><strong>Mehmet Candas, Daniel Winkler, Sazid Aziz, Daimkhan Zhabilov</strong> — UT Dallas (Bacterial Propionate Metabolism)</li>
+    <li><strong>MD Joshem Uddin, Funmilola Mary Taiwo, Joshua A. Myrich, Sumeyye Kumar</strong> — UT Dallas (graduate collaborators on TopER, TopoFormer, SCNode, PROXI, DuoLink)</li>
+  </ul>
+</section>
 
-        <!-- TopER -->
-        <div class="card">
-          <h3>toper.htmlTopER</a>
-            <small style="color:var(--accent); display:block; font-weight:500; margin-top:0.1rem;">NeurIPS 2025</small>
-          </h3>
-          <p><em>Topological Embeddings in Graph Representation Learning.</em> An interpretable, low-dimensional (2D) graph embedding grounded in topology. TopER fits a line to the (nodes, edges) trajectory across a filtration, producing a <strong>(pivot, growth)</strong> descriptor that scales to 100K-node graphs and matches SOTA on classification and clustering.</p>
-          <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-soft);">
-            With F. M. Taiwo, C. G. Akcora, B. Coskunuzer.
-            https://astrittola.github.io/TopER.github.io/Project page</a>.
-          </p>
-        </div>
+</main>
 
-        <!-- SCNode -->
-        <div class="card">
-          <h3>SCNode
-            <small style="color:var(--accent); display:block; font-weight:500; margin-top:0.1rem;">TMLR 2025</small>
-          </h3>
-          <p><em>Spatial and Contextual Coordinates for Graph Representation Learning.</em> A node-embedding framework that jointly captures spatial geometry and contextual neighborhood signal for richer node-level representations across graph learning tasks.</p>
-          <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-soft);">
-            With MD J. Uddin, C. G. Akcora, B. Coskunuzer.
-            <a href="https://openreview.net/pdf?id=wdcdKeFbfQ" target="_blank" rel="noopener">PDF</a>.
-          </p>
-        </div>
+<footer>
+  <p>© 2026 Astrit Tola · Department of Mathematics, Florida State University</p>
+  <p>Office: LOV 424 · Mailbox: 0208 LOV, MC 4510 · Tallahassee, FL</p>
+</footer>
 
-        <!-- PROXI -->
-        <div class="card">
-          <h3>PROXI
-            <small style="color:var(--accent); display:block; font-weight:500; margin-top:0.1rem;">TMLR 2025</small>
-          </h3>
-          <p><em>Challenging the GNNs for Link Prediction.</em> A surprisingly strong proximity-based baseline that exposes how simple structural features can rival — and often beat — far more complex GNNs on link prediction benchmarks, prompting a rethink of evaluation practice.</p>
-          <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-soft);">
-            With J. A. Myrich, B. Coskunuzer.
-            <a href="https://openreview.net/pdf?id=u9EHndbiVw" target="_blank" rel="noopener">PDF</a>.
-          </p>
-        </div>
-
-        <!-- Bacterial Propionate Metabolism -->
-        <div class="card">
-          <h3>Bacterial Propionate Metabolism
-            <small style="color:var(--accent); display:block; font-weight:500; margin-top:0.1rem;">J. Molecular Graphics &amp; Modelling, 2026</small>
-          </h3>
-          <p><em>Identification of Molecular Compounds Targeting Bacterial Propionate Metabolism with Topological Machine Learning.</em> Uses topological descriptors and ML to screen molecular compounds that disrupt bacterial propionate metabolic pathways — a step toward new antimicrobial strategies.</p>
-          <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-soft);">
-            With S. Aziz, D. Zhabilov, D. Winkler, M. Candas, B. Coskunuzer.
-            https://www.biorxiv.org/content/10.1101/2024.10.26.620439v1bioRxiv</a>.
-          </p>
-        </div>
-
-        <!-- DuoLink -->
-        <div class="card">
-          <h3>DuoLink
-            <small style="color:var(--accent); display:block; font-weight:500; margin-top:0.1rem;">In preparation</small>
-          </h3>
-          <p><em>A Dual Perspective on Link Prediction via Line Graphs.</em> Reformulates link prediction by jointly modeling a graph and its line graph, capturing both node–node and edge–edge interactions for stronger predictive performance.</p>
-          <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-soft);">
-            With S. Kumar, B. Coskunuzer.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== Team on TopoCorr-KG ===== -->
-    <section>
-      <h2 class="section-title">Team on TopoCorr-KG</h2>
-      <div class="news-item">
-        <h3>Research Assistants</h3>
-        <p>The <strong>TopoCorr-KG</strong> project at FSU is supported by <strong>Ece Karacam (GTA)</strong> and <strong>Sebastian Powers (UTA)</strong>. Learn more on the topocorr-kg.html.</p>
-        <p style="margin-top:0.5rem;">Future students interested in topological ML, graph AI, or AI for cybersecurity / drug discovery are welcome to <a href="mailto:atola@fsu.edu">get in touch</a> about upcoming opportunities.</p>
-      </div>
-    </section>
-
-    <!-- ===== Collaborators ===== -->
-    <section>
-      <h2 class="section-title">Collaborators</h2>
-      <p>I am fortunate to collaborate closely with researchers across mathematics, computer science, and the life sciences:</p>
-      <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.9; color: var(--text);">
-        <li><strong>Baris Coskunuzer</strong> — UT Dallas (Ph.D. advisor, ongoing collaborator on most projects)</li>
-        <li><strong>Malbor Asllani</strong> — Florida State University (Co-PI on TopoCorr-KG)</li>
-        <li><strong>Cuneyt Gurcan Akcora</strong> — University of Central Florida (TopER, TopoFormer, SCNode)</li>
-        <li><strong>Mehmet Candas, Daniel Winkler, Sazid Aziz, Daimkhan Zhabilov</strong> — UT Dallas (Bacterial Propionate Metabolism)</li>
-        <li><strong>MD Joshem Uddin, Funmilola Mary Taiwo, Joshua A. Myrich, Sumeyye Kumar</strong> — UT Dallas (graduate collaborators on TopER, TopoFormer, SCNode, PROXI, DuoLink)</li>
-      </ul>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>© 2026 Astrit Tola · Department of Mathematics, Florida State University</p>
-    <p>Office: LOV 424 · Mailbox: 0208 LOV, MC 4510 · Tallahassee, FL</p>
-  </footer>
-  assets/js/main.js
+<script src="assets/js/main.js"></script>
 </body>
 </html>
