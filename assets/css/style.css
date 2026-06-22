@@ -44,8 +44,40 @@ body {
   line-height: 1.65;
   transition: background 0.3s ease, color 0.3s ease;
 }
-a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
-a:hover { color: var(--accent); }
+/* ===== Links (default style) ===== */
+a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color .2s, text-decoration-color .2s;
+}
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--primary);
+}
+
+/* ===== Don't underline structural/UI links ===== */
+.nav-links a,
+.nav-brand,
+.social-links a,
+.pub-links a,
+.btn-primary,
+.card h3 a,
+.pub-title a,
+footer a {
+  text-decoration: none;
+}
+
+/* ===== Make in-card author/inline links subtly underlined on hover only ===== */
+.card a:not(.btn-primary):hover,
+.pub-item a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
 img { max-width: 100%; display: block; }
 
 /* ===== Navigation ===== */
