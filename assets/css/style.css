@@ -146,7 +146,7 @@ section { margin-bottom: 4rem; }
 /* ===== Hero ===== */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 350px;
   gap: 3rem;
   align-items: center;
   margin-bottom: 3.5rem;
@@ -167,8 +167,8 @@ section { margin-bottom: 4rem; }
 .hero p { margin-bottom: 1rem; color: var(--text); }
 
 .profile-img {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 20%;
