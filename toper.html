@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TopER | TopoML&amp;AI @ FSU</title>
+  <meta name="description" content="TopER (Topological Evolution Rate) — A novel low-dimensional, interpretable graph embedding method grounded in topological data analysis. NeurIPS 2025.">
+
+  <meta property="og:title" content="TopER — Topological Embeddings in Graph Representation Learning (NeurIPS 2025)">
+  <meta property="og:description" content="A novel low-dimensional, interpretable graph embedding method grounded in topological data analysis.">
+  <meta property="og:type" content="website">
+
+  https://fonts.googleapis.com
+  https://fonts.gstatic.com
+  https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  assets/css/style.css
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      index.html
+        Astrit Tola
+        <small>TopoML&amp;AI @ FSU</small>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li>index.html</li>
+        <li>research.html</li>
+        <li>publications.html</li>
+        <li>teaching.html</li>
+        <li>talks.html</li>
+        <li>cv.html</li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== Project Hero ===== -->
+    <section style="background: var(--bg-soft); border-radius: var(--radius); padding: 2.5rem; margin-bottom: 3rem; border-left: 4px solid var(--accent);">
+      <div style="display:inline-block; background:var(--accent); color:#fff; padding:0.3rem 0.8rem; border-radius:999px; font-size:0.75rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:1rem;">
+        NeurIPS 2025 · Topological Machine Learning
+      </div>
+      <h1 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: -0.01em;">TopER</h1>
+      <p style="font-size: 1.15rem; color: var(--text-soft); margin-bottom: 1rem; font-style: italic;">Topological Embeddings in Graph Representation Learning</p>
+      <p style="color: var(--text);"><strong>Astrit Tola</strong>, Funmilola Mary Taiwo, Cuneyt Gurcan Akcora, Baris Coskunuzer.<br>
+      <em>Advances in Neural Information Processing Systems (NeurIPS), 2025.</em></p>
+    </section>
+
+    <!-- ===== Overview ===== -->
+    <section>
+      <h2 class="section-title">Overview</h2>
+      <p>Graph embeddings play a critical role in graph representation learning, allowing ML models to explore and interpret graph-structured data. However, existing methods often rely on <strong>opaque, high-dimensional embeddings</strong>, limiting interpretability and practical visualization.</p>
+
+      <p style="margin-top: 1rem;"><strong>TopER</strong> — short for <em>Topological Evolution Rate</em> — is a novel, <strong>low-dimensional embedding approach grounded in topological data analysis</strong>. Inspired by <em>Persistent Homology</em>, TopER simplifies this classical topological tool by tracking <strong>how the shape of a graph evolves across a filtration</strong>, and summarizing this evolution into a compact, interpretable descriptor.</p>
+
+      <p style="margin-top: 1rem;">The method proceeds in three steps:</p>
+      <ol style="margin: 1rem 0 1rem 1.5rem; line-height: 1.9;">
+        <li><strong>Filtration sequence</strong> — build a nested sequence of subgraphs $G_1 \subseteq G_2 \subseteq \dots \subseteq G_n = G$ using a chosen graph filtration (e.g., degree centrality, closeness, Forman–Ricci curvature).</li>
+        <li><strong>Relative diagram</strong> — at each step, record (number of nodes, number of edges) of the subgraph.</li>
+        <li><strong>Evolution fit</strong> — fit a line to this sequence via least squares; the two coefficients <strong>(pivot, growth)</strong> become the graph's 2D embedding.</li>
+      </ol>
+
+      <p>The result is a remarkably simple yet expressive descriptor with several practical advantages:</p>
+      <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.9;">
+        <li><strong>Interpretable</strong> — every embedding lives in 2D and can be directly visualized to reveal clusters, outliers, and structural patterns.</li>
+        <li><strong>Scalable</strong> — handles graphs with 100K+ nodes in minutes, avoiding the cubic complexity of persistent homology.</li>
+        <li><strong>Stable</strong> — robust under perturbations of graph structure.</li>
+        <li><strong>Competitive</strong> — TopER-based models <strong>match or surpass state-of-the-art</strong> results on graph classification and clustering across molecular, biological, and social network datasets (MUTAG, PROTEINS, COX2, IMDB-B, REDDIT-B, REDDIT-5K, and more).</li>
+      </ul>
+
+      <p>TopER is available as a Python package: <code style="background:var(--bg-soft);padding:0.15rem 0.4rem;border-radius:4px;">pip install toper</code></p>
+    </section>
+
+    <!-- ===== Links ===== -->
+    <section>
+      <h2 class="section-title">Links &amp; Resources</h2>
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>📄 NeurIPS Page</h3>
+          <p>Official NeurIPS 2025 poster page with abstract, slides, and OpenReview.</p>
+          <p style="margin-top:0.75rem;">
+            https://neurips.cc/virtual/2025/poster/118699Visit NeurIPS page →</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🌐 Project Website</h3>
+          <p>Dedicated TopER project site with documentation, visualizations, and benchmarks.</p>
+          <p style="margin-top:0.75rem;">
+            https://astrittola.github.io/TopER.github.io/Visit project site →</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>💻 Code (GitHub)</h3>
+          <p>Official implementation, datasets, and examples.</p>
+          <p style="margin-top:0.75rem;">
+            https://github.com/AstritTola/TopERGitHub repository →</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>📰 Paper (arXiv / OpenReview)</h3>
+          <p>Full paper and supplementary materials.</p>
+          <p style="margin-top:0.75rem;">
+            https://arxiv.org/abs/2410.01778arXiv</a>
+            https://openreview.net/pdf?id=JjTLq7SXaBOpenReview</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Citation ===== -->
+    <section>
+      <h2 class="section-title">Citation</h2>
+      <p>If you use TopER in your research, please cite:</p>
+      <pre style="background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; overflow-x: auto; font-size: 0.85rem; line-height: 1.5; margin-top: 0.75rem;">@inproceedings{tola2025toper,
+  title     = {TopER: Topological Embeddings in Graph Representation Learning},
+  author    = {Astrit Tola and Funmilola Mary Taiwo and Cuneyt Gurcan Akcora and Baris Coskunuzer},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2025},
+  url       = {https://openreview.net/pdf?id=JjTLq7SXaB}
+}</pre>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Astrit Tola · Department of Mathematics, Florida State University</p>
+    <p>Office: LOV 424 · Mailbox: 0208 LOV, MC 4510 · TopER · TopoML&amp;AI @ FSU</p>
+  </footer>
+
+  <!-- MathJax for the inline LaTeX -->
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$', '$']] } };
+  </script>
+  https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+  assets/js/main.js
+</body>
+</html>
