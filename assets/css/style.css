@@ -44,18 +44,26 @@ body {
   line-height: 1.65;
   transition: background 0.3s ease, color 0.3s ease;
 }
-/* ===== Links (default style) ===== */
+
+/* ===== Links ===== */
 a {
   color: var(--primary);
   text-decoration: underline;
   text-decoration-color: var(--accent);
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
-  transition: color .2s, text-decoration-color .2s;
 }
 a:hover {
   color: var(--accent);
-  text-decoration-color: var(--primary);
+}
+
+/* Don't underline UI elements that are already styled as buttons/pills */
+.nav-brand,
+.nav-links a,
+.social-links a,
+.pub-links a,
+.btn-primary {
+  text-decoration: none;
 }
 
 /* ===== Don't underline structural/UI links ===== */
