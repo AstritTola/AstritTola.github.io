@@ -7,97 +7,97 @@
 <meta name="description" content="TopoFormer: Topology Meets Attention for Graph Learning — a lightweight, scalable framework integrating topology with Transformers. ICLR 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com">
-assets/css/style.css
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-brand">Astrit Tola<small>TopoML&amp;AI @ FSU</small></a>
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="talks.html">Talks</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><button class="theme-toggle" id="themeToggle">🌙</button></li>
-    </ul>
-  </div>
+<div class="nav-container">
+<a href="index.html" class="nav-brand">Astrit Tola<small>TopoML&amp;AI @ FSU</small></a>
+<button class="menu-toggle" id="menuToggle">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="teaching.html">Teaching</a></li>
+<li><a href="talks.html">Talks</a></li>
+<li><a href="cv.html">CV</a></li>
+<li><button class="theme-toggle" id="themeToggle">🌙</button></li>
+</ul>
+</div>
 </nav>
 
 <main>
 
 <section style="background:var(--bg-soft);border-radius:var(--radius);padding:2.5rem;margin-bottom:3rem;border-left:4px solid var(--accent);">
-  <div style="display:inline-block;background:var(--accent);color:#fff;padding:0.3rem 0.8rem;border-radius:999px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem;">ICLR 2026 · Topological Machine Learning</div>
-  <h1 style="font-size:2.2rem;color:var(--primary);margin-bottom:0.5rem;letter-spacing:-0.01em;">TopoFormer</h1>
-  <p style="font-size:1.15rem;color:var(--text-soft);margin-bottom:1rem;font-style:italic;">Topology Meets Attention for Graph Learning</p>
-  <p style="color:var(--text);">MD Joshem Uddin<sup>★</sup>, <strong>Astrit Tola</strong><sup>★</sup>, Cuneyt Gurcan Akcora, Baris Coskunuzer.<br><em>International Conference on Learning Representations (ICLR), 2026.</em><br><small style="color:var(--text-soft);"><sup>★</sup> Equal contribution.</small></p>
+<div style="display:inline-block;background:var(--accent);color:#fff;padding:0.3rem 0.8rem;border-radius:999px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem;">ICLR 2026 · Topological Machine Learning</div>
+<h1 style="font-size:2.2rem;color:var(--primary);margin-bottom:0.5rem;letter-spacing:-0.01em;">TopoFormer</h1>
+<p style="font-size:1.15rem;color:var(--text-soft);margin-bottom:1rem;font-style:italic;">Topology Meets Attention for Graph Learning</p>
+<p style="color:var(--text);">MD Joshem Uddin<sup>★</sup>, <strong>Astrit Tola</strong><sup>★</sup>, Cuneyt Gurcan Akcora, Baris Coskunuzer.<br><em>International Conference on Learning Representations (ICLR), 2026.</em><br><small style="color:var(--text-soft);"><sup>★</sup> Equal contribution.</small></p>
 </section>
 
 <section>
-  <h2 class="section-title">Overview</h2>
-  <p><strong>TopoFormer</strong> is a lightweight and scalable framework for graph representation learning that encodes topological structure into <em>attention-friendly sequences</em>. At its core is <strong>Topo-Scan</strong>, a novel module that decomposes a graph into a short, ordered sequence of <em>topological tokens</em> by slicing over node or edge filtrations. These sequences capture multi-scale structural patterns — from local motifs to global organization — and are processed by a Transformer to produce expressive graph-level embeddings.</p>
-  <p style="margin-top:1rem;">Unlike traditional persistent homology pipelines, Topo-Scan is <strong>parallelizable, avoids costly diagram computations, and integrates seamlessly with standard deep learning architectures</strong>. The result is a class of models that:</p>
-  <ul style="margin:1rem 0 1rem 1.5rem;line-height:1.9;">
-    <li><strong>Bypass persistence diagrams</strong> — directly extract topological sequences from sliced subgraphs.</li>
-    <li><strong>Avoid early saturation</strong> — a sliding-window slicing strategy preserves late-emerging structural features that standard sublevel filtrations miss.</li>
-    <li><strong>Plug into transformers natively</strong> — short, 1D, fixed-width topological token sequences fit attention's native regime, no graph-specific machinery required.</li>
-    <li><strong>Come with theoretical guarantees</strong> — we prove stability of the topological encodings under graph perturbations.</li>
-    <li><strong>Achieve state-of-the-art performance</strong> — matching or exceeding strong GNN and topology-based baselines on graph classification and molecular property prediction benchmarks.</li>
-  </ul>
-  <p>We view TopoFormer as a step toward <strong>topology-aware graph foundation models</strong> — bridging topological data analysis and modern attention-based architectures in a unified, scalable framework.</p>
+<h2 class="section-title">Overview</h2>
+<p><strong>TopoFormer</strong> is a lightweight and scalable framework for graph representation learning that encodes topological structure into <em>attention-friendly sequences</em>. At its core is <strong>Topo-Scan</strong>, a novel module that decomposes a graph into a short, ordered sequence of <em>topological tokens</em> by slicing over node or edge filtrations. These sequences capture multi-scale structural patterns — from local motifs to global organization — and are processed by a Transformer to produce expressive graph-level embeddings.</p>
+<p style="margin-top:1rem;">Unlike traditional persistent homology pipelines, Topo-Scan is <strong>parallelizable, avoids costly diagram computations, and integrates seamlessly with standard deep learning architectures</strong>. The result is a class of models that:</p>
+<ul style="margin:1rem 0 1rem 1.5rem;line-height:1.9;">
+<li><strong>Bypass persistence diagrams</strong> — directly extract topological sequences from sliced subgraphs.</li>
+<li><strong>Avoid early saturation</strong> — a sliding-window slicing strategy preserves late-emerging structural features that standard sublevel filtrations miss.</li>
+<li><strong>Plug into transformers natively</strong> — short, 1D, fixed-width topological token sequences fit attention's native regime, no graph-specific machinery required.</li>
+<li><strong>Come with theoretical guarantees</strong> — we prove stability of the topological encodings under graph perturbations.</li>
+<li><strong>Achieve state-of-the-art performance</strong> — matching or exceeding strong GNN and topology-based baselines on graph classification and molecular property prediction benchmarks.</li>
+</ul>
+<p>We view TopoFormer as a step toward <strong>topology-aware graph foundation models</strong> — bridging topological data analysis and modern attention-based architectures in a unified, scalable framework.</p>
 </section>
 
 <section>
-  <h2 class="section-title">Method Highlights</h2>
-  <div class="card-grid">
-    <div class="card">
-      <h3>🔬 Topo-Scan</h3>
-      <p>Decomposes a graph into a sequence of overlapping subgraph slices along a filtration function $f: V \to \mathbb{R}$, then computes compact tokens $(\beta_0, \beta_1, |V_i|, |E_i|)$ per slice.</p>
-    </div>
-    <div class="card">
-      <h3>🧠 Topology + Attention</h3>
-      <p>Ordered topological token sequences are processed by a Transformer encoder, letting self-attention capture multi-scale structural dependencies natively.</p>
-    </div>
-    <div class="card">
-      <h3>📐 Theoretical Stability</h3>
-      <p>We prove that TopoFormer's encodings are stable under graph perturbations — a desirable property inherited from persistent topology.</p>
-    </div>
-    <div class="card">
-      <h3>⚡ Scalable &amp; Parallel</h3>
-      <p>Slice extraction is embarrassingly parallel and avoids global persistence computation, making the pipeline practical for large-scale graph learning.</p>
-    </div>
-  </div>
+<h2 class="section-title">Method Highlights</h2>
+<div class="card-grid">
+<div class="card">
+<h3>🔬 Topo-Scan</h3>
+<p>Decomposes a graph into a sequence of overlapping subgraph slices along a filtration function, then computes compact topological tokens per slice.</p>
+</div>
+<div class="card">
+<h3>🧠 Topology + Attention</h3>
+<p>Ordered topological token sequences are processed by a Transformer encoder, letting self-attention capture multi-scale structural dependencies natively.</p>
+</div>
+<div class="card">
+<h3>📐 Theoretical Stability</h3>
+<p>We prove that TopoFormer's encodings are stable under graph perturbations — a desirable property inherited from persistent topology.</p>
+</div>
+<div class="card">
+<h3>⚡ Scalable &amp; Parallel</h3>
+<p>Slice extraction is embarrassingly parallel and avoids global persistence computation, making the pipeline practical for large-scale graph learning.</p>
+</div>
+</div>
 </section>
 
 <section>
-  <h2 class="section-title">Links &amp; Resources</h2>
-  <div class="card-grid">
-    <div class="card">
-      <h3>📄 ICLR Page</h3>
-      <p>Official ICLR 2026 poster page. Pavilion 3, P3-#811 · Fri, Apr 24, 2026 · 11:15 AM – 1:45 PM PDT.</p>
-      <p style="margin-top:0.75rem;"><a class="btn-primary" href="https://iclr.cc/virtual/2026/poster/10006631" target="_blank" rel="noopener">Visit ICLR page →</a></p>
-    </div>
-    <div class="card">
-      <h3>📰 Paper (OpenReview)</h3>
-      <p>Full paper, supplementary, and reviews.</p>
-      <p style="margin-top:0.75rem;"><a class="btn-primary" href="https://openreview.net/pdf?id=xanpQt9YZh" target="_blank" rel="noopener">OpenReview PDF →</a></p>
-    </div>
-    <div class="card">
-      <h3>💻 Code (GitHub)</h3>
-      <p>Official TopoFormer implementation with experiments.</p>
-      <p style="margin-top:0.75rem;"><a class="btn-primary" href="https://github.com/joshem163/TOPOFORMER" target="_blank" rel="noopener">GitHub repository →</a></p>
-    </div>
-  </div>
+<h2 class="section-title">Links &amp; Resources</h2>
+<div class="card-grid">
+<div class="card">
+<h3>📄 ICLR Page</h3>
+<p>Official ICLR 2026 poster page. Pavilion 3, P3-#811 · Fri, Apr 24, 2026 · 11:15 AM – 1:45 PM PDT.</p>
+<p style="margin-top:0.75rem;"><a class="btn-primary" href="https://iclr.cc/virtual/2026/poster/10006631" target="_blank" rel="noopener">Visit ICLR page →</a></p>
+</div>
+<div class="card">
+<h3>📰 Paper (OpenReview)</h3>
+<p>Full paper, supplementary, and reviews.</p>
+<p style="margin-top:0.75rem;"><a class="btn-primary" href="https://openreview.net/pdf?id=xanpQt9YZh" target="_blank" rel="noopener">OpenReview PDF →</a></p>
+</div>
+<div class="card">
+<h3>💻 Code (GitHub)</h3>
+<p>Official TopoFormer implementation with experiments.</p>
+<p style="margin-top:0.75rem;"><a class="btn-primary" href="https://github.com/joshem163/TOPOFORMER" target="_blank" rel="noopener">GitHub repository →</a></p>
+</div>
+</div>
 </section>
 
 <section>
-  <h2 class="section-title">Citation</h2>
-  <p>If you use TopoFormer in your research, please cite:</p>
-  <pre style="background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;overflow-x:auto;font-size:0.85rem;line-height:1.5;margin-top:0.75rem;">@inproceedings{uddin2026topoformer,
+<h2 class="section-title">Citation</h2>
+<p>If you use TopoFormer in your research, please cite:</p>
+<pre style="background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;overflow-x:auto;font-size:0.85rem;line-height:1.5;margin-top:0.75rem;">@inproceedings{uddin2026topoformer,
   title     = {TopoFormer: Topology Meets Attention for Graph Learning},
   author    = {MD Joshem Uddin and Astrit Tola and Cuneyt Gurcan Akcora and Baris Coskunuzer},
   booktitle = {International Conference on Learning Representations (ICLR)},
@@ -109,12 +109,10 @@ assets/css/style.css
 </main>
 
 <footer>
-  <p>© 2026 Astrit Tola · Department of Mathematics, Florida State University</p>
-  <p>Office: LOV 424 · Mailbox: 0208 LOV, MC 4510 · TopoFormer · TopoML&amp;AI @ FSU</p>
+<p>© 2026 Astrit Tola · Department of Mathematics, Florida State University</p>
+<p>Office: LOV 424 · Mailbox: 0208 LOV, MC 4510 · TopoFormer · TopoML&amp;AI @ FSU</p>
 </footer>
 
-<script>window.MathJax={tex:{inlineMath:[['$','$']]}};</script>
-https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
-assets/js/main.js
+<script src="assets/js/main.js"></script>
 </body>
 </html>
