@@ -57,24 +57,26 @@ a:hover {
   color: var(--accent);
 }
 
-/* Don't underline UI elements that are already styled as buttons/pills */
+/* Card titles that are links — make them clearly clickable, always */
+.card h3 a,
+.pub-title a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.card h3 a:hover,
+.pub-title a:hover {
+  color: var(--accent);
+}
+
+/* Only these UI elements should stay clean (no underline) — they're already styled as buttons/pills/nav */
 .nav-brand,
 .nav-links a,
 .social-links a,
 .pub-links a,
 .btn-primary {
-  text-decoration: none;
-}
-
-/* ===== Don't underline structural/UI links ===== */
-.nav-links a,
-.nav-brand,
-.social-links a,
-.pub-links a,
-.btn-primary,
-.card h3 a,
-.pub-title a,
-footer a {
   text-decoration: none;
 }
 
