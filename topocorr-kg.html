@@ -4,128 +4,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TopoCorr-KG | TopoML&amp;AI @ FSU</title>
+<meta name="description" content="TopoCorr-KG: Topology-Aware Retrieval and Correlation Across Disparate Cybersecurity Knowledge Graphs. ReliaQuest Innovation Challenge at FSU.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+ts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+assets/css/style.css
+<style>
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 700px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 
 <nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-brand">Astrit Tola<small>TopoML&amp;AI @ FSU</small></a>
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="talks.html">Talks</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><button class="theme-toggle" id="themeToggle">🌙</button></li>
-    </ul>
-  </div>
+<div class="nav-container">
+<a href="index.html" class="nav-brand">Astrit Tola<small>TopoML&amp;AI @ FSU</small></a>
+<button class="menu-toggle" id="menuToggle">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="teaching.html">Teaching</a></li>
+<li><a href="talks.html">Talks</a></li>
+<li><a href="cv.html">CV</a></li>
+<li><button class="theme-toggle" id="themeToggle">🌙</button></li>
+</ul>
+</div>
 </nav>
 
 <main>
 
-
 <section style="background:var(--bg-soft);border-radius:var(--radius);padding:2.5rem;margin-bottom:3rem;border-left:4px solid var(--accent);">
-  <div style="display:inline-block;background:var(--accent);color:#fff;padding:0.3rem 0.8rem;border-radius:999px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem;">ReliaQuest Innovation Challenge</div>
-  <h1 style="font-size:2.2rem;color:var(--primary);margin-bottom:0.5rem;letter-spacing:-0.01em;">TopoCorr-KG</h1>
-  <p style="font-size:1.15rem;color:var(--text-soft);margin-bottom:1rem;font-style:italic;">Topology-Aware Retrieval and Correlation Across Disparate Cybersecurity Knowledge Graphs</p>
-  <p style="color:var(--text);">A Florida State University research project funded by the <strong>ReliaQuest Innovation Challenge</strong>. TopoCorr-KG retrieves and correlates entities across multiple authoritative cybersecurity knowledge graphs <strong>without physical integration</strong>, returning ranked, source-attributed evidence paths for analyst verification.</p>
-</section>
-
-  
-<section>
-  <h2 class="section-title">Project Overview</h2>
-  <p>Authoritative cybersecurity knowledge is distributed across several disjoint catalogs maintained by <strong>MITRE</strong> and <strong>NIST</strong> — including <strong>ATT&amp;CK</strong> (attacker behaviors), <strong>CAPEC</strong> (attack patterns), <strong>CWE</strong> (software-weakness categories), and <strong>CVE/NVD</strong> (disclosed vulnerabilities). Centralizing these sources is often impractical due to engineering overhead, consistency burdens, and privacy or contractual constraints — leaving analysts to manually correlate entities across silos.</p>
-  <p style="margin-top:1rem;"><strong>TopoCorr-KG</strong> queries each source independently and composes locally relevant subgraphs into ranked <strong>evidence paths</strong>:</p>
-  <p style="text-align:center;font-weight:600;color:var(--primary);background:var(--bg-soft);padding:1rem;border-radius:var(--radius);margin:1rem 0;">Behavior → Attack Pattern → Software Weakness → Vulnerability</p>
-  <p>Each step carries full provenance, so analysts can verify or reject candidate paths in seconds. The AI component is a learned cross-source correlation model that combines semantic embeddings, graph-structural descriptors, and supervised link-prediction signals.</p>
-</section>
-
-  
-<section>
-  <h2 class="section-title">Approach</h2>
-  <div class="card-grid">
-    <div class="card">
-      <h3>1. Per-Source Graphs</h3>
-      <p>Each MITRE catalog is loaded into its own logical Neo4j database. The four databases are kept separate by design.</p>
-    </div>
-    <div class="card">
-      <h3>2. Hybrid Search Index</h3>
-      <p>Each source receives a hybrid index combining classical keyword retrieval with a dense sentence-transformer encoder, plus cached structural and topological descriptors.</p>
-    </div>
-    <div class="card">
-      <h3>3. Query-Time Retrieval</h3>
-      <p>Each index is searched independently. Local subgraph context is fetched on demand — no global scan or merge required.</p>
-    </div>
-    <div class="card">
-      <h3>4. Cross-Source Ranking</h3>
-      <p>Candidates are linked into evidence paths scored by textual similarity, structural similarity, and a learned cross-source link-prediction signal trained on official MITRE mappings.</p>
-    </div>
-  </div>
-</section>
-
-  
-<section>
-  <h2 class="section-title">Project Team</h2>
-  <div class="team-grid">
-
-    <div class="card" style="border-top:4px solid var(--primary);">
-      <div style="display:inline-block;background:var(--primary);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:999px;letter-spacing:0.05em;margin-bottom:0.6rem;">PI</div>
-      <h3>Astrit Tola</h3>
-      <p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Principal Investigator</p>
-      <p>Postdoctoral Scholar, Department of Mathematics, FSU. Research focuses on topological data analysis, graph machine learning, and AI for science and security. Leads <strong>TopoML&amp;AI @ FSU</strong>.</p>
-      <p style="margin-top:0.75rem;">u">atola@fsu.edu</a> · <a href="index.html">Personal site</a></p>
-    </div>
-
-    <div class="card" style="border-top:4px solid var(--primary);">
-      <div style="display:inline-block;background:var(--primary);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:999px;letter-spacing:0.05em;margin-bottom:0.6rem;">Co-PI</div>
-      <h3>Malbor Asllani</h3>
-      <p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Co-Principal Investigator</p>
-      <p>Assistant Professor of Interdisciplinary Mathematics at FSU. Brings complementary expertise in <strong>network science and dynamical processes on graphs</strong>.</p>
-      <p style="margin-top:0.75rem;">u">masllani@fsu.edu</a> · <a href="https://malborasllani.site" target="_blank" rel="noopener">malborasllani.site</a></p>
-    </div>
-
-    <div class="card" style="border-top:4px solid var(--accent);">
-      <div style="display:inline-block;background:var(--accent);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:999px;letter-spacing:0.05em;margin-bottom:0.6rem;">GTA</div>
-      <h3>Ece Karacam</h3>
-      <p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Graduate Research Assistant</p>
-      <p style="color:var(--text-soft);font-style:italic;">Bio coming soon.</p>
-    </div>
-
-    <div class="card" style="border-top:4px solid var(--accent);">
-      <div style="display:inline-block;background:var(--accent);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:999px;letter-spacing:0.05em;margin-bottom:0.6rem;">UTA</div>
-      <h3>Sebastian Powers</h3>
-      <p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Undergraduate Research Assistant</p>
-      <p style="color:var(--text-soft);font-style:italic;">Bio coming soon.</p>
-    </div>
-
-  </div>
+<div style="display:inline-block;background:var(--accent);color:#fff;padding:0.3rem 0.8rem;border-radius:999px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem;">ReliaQuest Innovation Challenge</div>
+<h1 style="font-size:2.2rem;color:var(--primary);margin-bottom:0.5rem;letter-spacing:-0.01em;">TopoCorr-KG</h1>
+<p style="font-size:1.15rem;color:var(--text-soft);margin-bottom:1rem;font-style:italic;">Topology-Aware Retrieval and Correlation Across Disparate Cybersecurity Knowledge Graphs</p>
+<p style="color:var(--text);">A Florida State University research project funded by the <strong>ReliaQuest Innovation Challenge</strong>. TopoCorr-KG retrieves and correlates entities across multiple authoritative cybersecurity knowledge graphs <strong>without physical integration</strong>, returning ranked, source-attributed evidence paths for analyst verification.</p>
 </section>
 
 <section>
-  <h2 class="section-title">Funding</h2>
-  <div class="news-item">
-    <h3>ReliaQuest Innovation Challenge — Florida State University</h3>
-    <p>This project is supported by the <strong>ReliaQuest Innovation Challenge at Florida State University</strong>. We thank ReliaQuest and FSU for their support of research at the intersection of AI, topology, and cybersecurity.</p>
-  </div>
+<h2 class="section-title">Project Overview</h2>
+<p>Authoritative cybersecurity knowledge is distributed across several disjoint catalogs maintained by <strong>MITRE</strong> and <strong>NIST</strong> — including <strong>ATT&amp;CK</strong> (attacker behaviors), <strong>CAPEC</strong> (attack patterns), <strong>CWE</strong> (software-weakness categories), and <strong>CVE/NVD</strong> (disclosed vulnerabilities). Centralizing these sources is often impractical due to engineering overhead, consistency burdens, and privacy or contractual constraints — leaving analysts to manually correlate entities across silos.</p>
+<p style="margin-top:1rem;"><strong>TopoCorr-KG</strong> queries each source independently and composes locally relevant subgraphs into ranked <strong>evidence paths</strong>:</p>
+<p style="text-align:center;font-weight:600;color:var(--primary);background:var(--bg-soft);padding:1rem;border-radius:var(--radius);margin:1rem 0;">Behavior → Attack Pattern → Software Weakness → Vulnerability</p>
+<p>Each step carries full provenance, so analysts can verify or reject candidate paths in seconds. The AI component is a learned cross-source correlation model that combines semantic embeddings, graph-structural descriptors, and supervised link-prediction signals.</p>
 </section>
 
 <section>
-  <h2 class="section-title">Contact</h2>
-  <p>For questions, collaboration opportunities, or inquiries, please contact the PI:</p>
-  <p style="margin-top:1rem;">opoCorr-KG Inquiry">✉️ Astrit Tola — atola@fsu.edu</a></p>
+<h2 class="section-title">Approach</h2>
+<div class="card-grid">
+<div class="card">
+<h3>1. Per-Source Graphs</h3>
+<p>Each MITRE/NIST catalog is loaded into its own logical Neo4j database. The four databases are kept separate by design.</p>
+</div>
+<div class="card">
+<h3>2. Hybrid Search Index</h3>
+<p>Each source receives a hybrid index combining classical keyword retrieval with a dense sentence-transformer encoder, plus cached structural and topological descriptors.</p>
+</div>
+<div class="card">
+<h3>3. Query-Time Retrieval</h3>
+<p>Each index is searched independently. Local subgraph context is fetched on demand — no global scan or merge required.</p>
+</div>
+<div class="card">
+<h3>4. Cross-Source Ranking</h3>
+<p>Candidates are linked into evidence paths scored by textual similarity, structural similarity, and a learned cross-source link-prediction signal trained on official MITRE mappings.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Project Team</h2>
+<div class="team-grid">
+
+<div class="card" style="border-top:4px solid var(--primary);">
+<div style="display:inline-block;background:var(--primary);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:999px;letter-spacing:0.05em;margin-bottom:0.6rem;">PI</div>
+<h3>Astrit Tola</h3>
+<p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Principal Investigator</p>
+<p>Postdoctoral Scholar, Department of Mathematics, FSU. Research focuses on topological data analysis, graph machine learning, and AI for science and security. Leads <strong>TopoML&amp;AI @ FSU</strong>.</p>
+<p style="margin-top:0.75rem;"><a href="mailto:atola@fsu.edu">atola@fsu.edu</a> · <a href="index.html">Personal site</a></p>
+</div>
+
+<div class="card" style="border-top:4px solid var(--primary);">
+<div style="display:inline-block;background:var(--primary);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:999px;letter-spacing:0.05em;margin-bottom:0.6rem;">Co-PI</div>
+<h3>Malbor Asllani</h3>
+<p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Co-Principal Investigator</p>
+<p>Assistant Professor of Interdisciplinary Mathematics at FSU. Brings complementary expertise in <strong>network science and dynamical processes on graphs</strong>.</p>
+<p style="margin-top:0.75rem;"><a href="mailto:masllani@fsu.edu">masllani@fsu.edu</a> · <a href="https://malborasllani.site" target="_blank" rel="noopener">malborasllani.site</a></p>
+</div>
+
+<div class="card" style="border-top:4px solid var(--accent);">
+<div style="display:inline-block;background:var(--accent);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:999px;letter-spacing:0.05em;margin-bottom:0.6rem;">GTA</div>
+<h3>Ece Karacam</h3>
+<p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Graduate Research Assistant</p>
+<p style="color:var(--text-soft);font-style:italic;">Bio coming soon.</p>
+</div>
+
+<div class="card" style="border-top:4px solid var(--accent);">
+<div style="display:inline-block;background:var(--accent);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:999px;letter-spacing:0.05em;margin-bottom:0.6rem;">UTA</div>
+<h3>Sebastian Powers</h3>
+<p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Undergraduate Research Assistant</p>
+<p style="color:var(--text-soft);font-style:italic;">Bio coming soon.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Funding</h2>
+<div class="news-item">
+<h3>ReliaQuest Innovation Challenge — Florida State University</h3>
+<p>This project is supported by the <strong>ReliaQuest Innovation Challenge at Florida State University</strong>. We thank ReliaQuest and FSU for their support of research at the intersection of AI, topology, and cybersecurity.</p>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Contact</h2>
+<p>For questions, collaboration opportunities, or inquiries, please contact the PI:</p>
+<p style="margin-top:1rem;">u?subject=TopoCorr-KG%20Inquiry">✉️ Astrit Tola — atola@fsu.edu</a></p>
 </section>
 
 </main>
 
 <footer>
-  <p>© 2026 Astrit Tola · Department of Mathematics, Florida State University</p>
-  <p>TopoCorr-KG · ReliaQuest Innovation Challenge · Office: LOV 424 · Mailbox: LOV 0208, MC 4510</p>
+<p>© 2026 Astrit Tola · Department of Mathematics, Florida State University</p>
+<p>TopoCorr-KG · ReliaQuest Innovation Challenge · Office: LOV 424 · Mailbox: LOV 0208, MC 4510</p>
 </footer>
 
 assets/js/main.js
