@@ -29,60 +29,65 @@
 
 <main>
 
+
 <section style="background:var(--bg-soft);border-radius:var(--radius);padding:2.5rem;margin-bottom:3rem;border-left:4px solid var(--accent);">
-  <div style="display:inline-block;background:var(--accent);color:#fff;padding:0.3rem 0.8rem;border-radius:999px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem;">ReliaQuest Innovation Challenge · 2026</div>
+  <div style="display:inline-block;background:var(--accent);color:#fff;padding:0.3rem 0.8rem;border-radius:999px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem;">ReliaQuest Innovation Challenge</div>
   <h1 style="font-size:2.2rem;color:var(--primary);margin-bottom:0.5rem;letter-spacing:-0.01em;">TopoCorr-KG</h1>
   <p style="font-size:1.15rem;color:var(--text-soft);margin-bottom:1rem;font-style:italic;">Topology-Aware Retrieval and Correlation Across Disparate Cybersecurity Knowledge Graphs</p>
-  <p style="color:var(--text);">A Florida State University research project funded by the <strong>ReliaQuest Innovation Challenge</strong>, developing AI-driven methods for retrieving and correlating information across separate cybersecurity knowledge graphs — with the goal of improving cyber threat analysis and decision-making.</p>
+  <p style="color:var(--text);">A Florida State University research project funded by the <strong>ReliaQuest Innovation Challenge</strong>. TopoCorr-KG retrieves and correlates entities across multiple authoritative cybersecurity knowledge graphs <strong>without physical integration</strong>, returning ranked, source-attributed evidence paths for analyst verification.</p>
 </section>
 
+  
 <section>
   <h2 class="section-title">Project Overview</h2>
-  <p>Modern cyber threat analysis depends on knowledge graphs (KGs) — structured representations of vulnerabilities, attacks, actors, tools, and infrastructure. In practice, these KGs are <strong>fragmented across organizations and standards</strong> (e.g., MITRE ATT&amp;CK, CVE/NVD, internal SOC graphs), making it difficult to correlate signals and form a unified picture of an evolving threat.</p>
-  <p style="margin-top:1rem;"><strong>TopoCorr-KG</strong> develops a new class of <em>topology-aware</em> retrieval and correlation methods that exploit the higher-order structure of knowledge graphs — going beyond pairwise edges to capture motifs, cycles, and persistent topological features that survive across disparate KGs. We combine ideas from:</p>
-  <ul style="margin:1rem 0 1rem 1.5rem;line-height:1.9;">
-    <li><strong>Topological Data Analysis</strong> — persistent homology and Euler characteristic curves as structural fingerprints.</li>
-    <li><strong>Graph Machine Learning</strong> — graph neural networks and transformer-based KG embeddings.</li>
-    <li><strong>Retrieval-Augmented AI</strong> — using topological signatures to guide retrieval across heterogeneous graphs.</li>
-  </ul>
+  <p>Authoritative cybersecurity knowledge is distributed across several disjoint catalogs maintained by <strong>MITRE</strong> and <strong>NIST</strong> — including <strong>ATT&amp;CK</strong> (attacker behaviors), <strong>CAPEC</strong> (attack patterns), <strong>CWE</strong> (software-weakness categories), and <strong>CVE/NVD</strong> (disclosed vulnerabilities). Centralizing these sources is often impractical due to engineering overhead, consistency burdens, and privacy or contractual constraints — leaving analysts to manually correlate entities across silos.</p>
+  <p style="margin-top:1rem;"><strong>TopoCorr-KG</strong> queries each source independently and composes locally relevant subgraphs into ranked <strong>evidence paths</strong>:</p>
+  <p style="text-align:center;font-weight:600;color:var(--primary);background:var(--bg-soft);padding:1rem;border-radius:var(--radius);margin:1rem 0;">Behavior → Attack Pattern → Software Weakness → Vulnerability</p>
+  <p>Each step carries full provenance, so analysts can verify or reject candidate paths in seconds. The AI component is a learned cross-source correlation model that combines semantic embeddings, graph-structural descriptors, and supervised link-prediction signals.</p>
 </section>
 
+  
 <section>
-  <h2 class="section-title">Research Aims</h2>
+  <h2 class="section-title">Approach</h2>
   <div class="card-grid">
     <div class="card">
-      <h3>Aim 1 — Topological Signatures for KGs</h3>
-      <p>Develop scalable topological descriptors that compactly summarize cybersecurity knowledge graphs and remain stable under noisy, evolving data.</p>
+      <h3>1. Per-Source Graphs</h3>
+      <p>Each MITRE catalog is loaded into its own logical Neo4j database. The four databases are kept separate by design.</p>
     </div>
     <div class="card">
-      <h3>Aim 2 — Cross-KG Retrieval</h3>
-      <p>Design retrieval methods that align disparate KGs using topology-aware similarity, surfacing related entities, attack patterns, and vulnerabilities across sources.</p>
+      <h3>2. Hybrid Search Index</h3>
+      <p>Each source receives a hybrid index combining classical keyword retrieval with a dense sentence-transformer encoder, plus cached structural and topological descriptors.</p>
     </div>
     <div class="card">
-      <h3>Aim 3 — Threat Correlation &amp; Analyst Support</h3>
-      <p>Build correlation pipelines that combine topological retrieval with LLM-based reasoning to support cyber analysts in real-world threat investigation workflows.</p>
+      <h3>3. Query-Time Retrieval</h3>
+      <p>Each index is searched independently. Local subgraph context is fetched on demand — no global scan or merge required.</p>
+    </div>
+    <div class="card">
+      <h3>4. Cross-Source Ranking</h3>
+      <p>Candidates are linked into evidence paths scored by textual similarity, structural similarity, and a learned cross-source link-prediction signal trained on official MITRE mappings.</p>
     </div>
   </div>
 </section>
 
+  
 <section>
   <h2 class="section-title">Project Team</h2>
-  <div class="card-grid" style="grid-template-columns:repeat(2,1fr);">
+  <div class="team-grid">
 
     <div class="card" style="border-top:4px solid var(--primary);">
       <div style="display:inline-block;background:var(--primary);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:999px;letter-spacing:0.05em;margin-bottom:0.6rem;">PI</div>
       <h3>Astrit Tola</h3>
       <p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Principal Investigator</p>
-      <p>Postdoctoral Scholar, Department of Mathematics, Florida State University. Research focuses on topological data analysis, graph machine learning, and AI for science and security. Leads <strong>TopoML&amp;AI @ FSU</strong>.</p>
-      <p style="margin-top:0.75rem;"><a href="mailto:atola@fsu.edu">atola@fsu.edu</a> · <a href="index.html">Personal site</a></p>
+      <p>Postdoctoral Scholar, Department of Mathematics, FSU. Research focuses on topological data analysis, graph machine learning, and AI for science and security. Leads <strong>TopoML&amp;AI @ FSU</strong>.</p>
+      <p style="margin-top:0.75rem;">u">atola@fsu.edu</a> · <a href="index.html">Personal site</a></p>
     </div>
 
     <div class="card" style="border-top:4px solid var(--primary);">
       <div style="display:inline-block;background:var(--primary);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem;border-radius:999px;letter-spacing:0.05em;margin-bottom:0.6rem;">Co-PI</div>
       <h3>Malbor Asllani</h3>
       <p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Co-Principal Investigator</p>
-      <p>Assistant Professor of Interdisciplinary Mathematics at Florida State University. His research focuses on <strong>complex systems, network science, biomathematics, stochastic processes, and data science</strong>. </p>
-      <p style="margin-top:0.75rem;"><a href="mailto:masllani@fsu.edu">masllani@fsu.edu</a> · <a href="https://malborasllani.site" target="_blank" rel="noopener">malborasllani.site</a></p>
+      <p>Assistant Professor of Interdisciplinary Mathematics at FSU. Brings complementary expertise in <strong>network science and dynamical processes on graphs</strong>.</p>
+      <p style="margin-top:0.75rem;">u">masllani@fsu.edu</a> · <a href="https://malborasllani.site" target="_blank" rel="noopener">malborasllani.site</a></p>
     </div>
 
     <div class="card" style="border-top:4px solid var(--accent);">
@@ -103,13 +108,18 @@
 </section>
 
 <section>
-  <h2 class="section-title">Funding &amp; Acknowledgments</h2>
+  <h2 class="section-title">Funding</h2>
   <div class="news-item">
     <h3>ReliaQuest Innovation Challenge — Florida State University</h3>
-    <p>This project is supported by the <strong>ReliaQuest Innovation Challenge at Florida State University</strong>. We thank ReliaQuest and FSU for their generous support of research at the intersection of AI, topology, and cybersecurity.</p>
+    <p>This project is supported by the <strong>ReliaQuest Innovation Challenge at Florida State University</strong>. We thank ReliaQuest and FSU for their support of research at the intersection of AI, topology, and cybersecurity.</p>
   </div>
 </section>
 
+<section>
+  <h2 class="section-title">Contact</h2>
+  <p>For questions, collaboration opportunities, or inquiries, please contact the PI:</p>
+  <p style="margin-top:1rem;">opoCorr-KG Inquiry">✉️ Astrit Tola — atola@fsu.edu</a></p>
+</section>
 
 </main>
 
@@ -118,6 +128,6 @@
   <p>TopoCorr-KG · ReliaQuest Innovation Challenge · Office: LOV 424 · Mailbox: LOV 0208, MC 4510</p>
 </footer>
 
-<script src="assets/js/main.js"></script>
+assets/js/main.js
 </body>
 </html>
