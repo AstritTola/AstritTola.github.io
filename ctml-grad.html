@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to Computational Topology and Machine Learning (Graduate) | Astrit Tola — TopoML&amp;AI @ FSU</title>
+<meta name="description" content="Introduction to Computational Topology and Machine Learning (MAP 5932.04, Graduate section), Spring 2027, Department of Mathematics, Florida State University. Taught by Dr. Astrit Tola. Open to all majors; no prior topology, Python, or machine learning required.">
+<link rel="canonical" href="https://astrittola.github.io/ctml-grad.html">
+<meta property="og:title" content="Introduction to Computational Topology and Machine Learning (Graduate)">
+<meta property="og:description" content="Introduction to Computational Topology and Machine Learning (MAP 5932.04, Graduate section), Spring 2027, Department of Mathematics, Florida State University. Taught by Dr. Astrit Tola. Open to all majors; no prior topology, Python, or machine learning required.">
+<meta property="og:url" content="https://astrittola.github.io/ctml-grad.html">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">Astrit Tola<small>TopoML&amp;AI @ FSU</small></a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html" class="active">Teaching</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><button class="theme-toggle" id="themeToggle">🌙</button></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<section class="page-hero">
+  <span class="pill">Spring 2027 · New Course</span><span class="pill navy">Graduate Section · Dual-Listed</span>
+  <h1>Introduction to Computational Topology and Machine Learning</h1>
+  <p class="lede">Open to all majors · No prior topology, Python, or machine learning required</p>
+  <p><strong>MAP 5932.04</strong> · Monday &amp; Wednesday, 3:05 PM · LOV 107</p>
+  <p>Department of Mathematics, Florida State University · 3 credit hours · Instructor: <strong>Dr. Astrit Tola</strong></p>
+  <p class="section-switch">Looking for the undergraduate section? → <a href="ctml-undergrad.html"><strong>Undergraduate course page</strong></a></p>
+</section>
+
+<section>
+  <h2 class="section-title">Course Information</h2>
+  <div class="table-wrap">
+  <table class="teaching-table info-table">
+    <tbody>
+      <tr><th>Course</th><td>Introduction to Computational Topology and Machine Learning — Graduate section</td></tr>
+      <tr><th>Course number</th><td><strong>MAP 5932.04</strong> (graduate section) · Undergraduate section: MAP 4934.02</td></tr>
+      <tr><th>Term</th><td>Spring 2027 · 3 credit hours</td></tr>
+      <tr><th>Instructor</th><td>Dr. Astrit Tola</td></tr>
+      <tr><th>Office / Email</th><td>LOV 424 · <a href="mailto:atola@fsu.edu">atola@fsu.edu</a></td></tr>
+      <tr><th>Office hours</th><td>TBA, and by appointment</td></tr>
+      <tr><th>Class meetings</th><td>Monday &amp; Wednesday · 3:05 PM · LOV 107 (graduate and undergraduate sections meet together)</td></tr>
+      <tr><th>Prerequisites</th><td>MAC 2312 with a B− or better, or MAC 2313 with a C− or better. No prior topology, Python, or machine learning required. Graduate students enroll in the dual-listed graduate section, MAP 5932.04.</td></tr>
+      <tr><th>Course website</th><td>Canvas — lecture notes, readings, coding notebooks, practice problems, and announcements</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Course Flyer</h2>
+  <div class="flyer-block">
+    <a href="assets/courses/ctml-flyer.pdf" target="_blank" rel="noopener" class="flyer-thumb"><img src="assets/courses/ctml-flyer.jpg" alt="Course flyer: Introduction to Computational Topology and Machine Learning, Spring 2027, MAP 4934.02 and MAP 5932.04, Monday and Wednesday 3:05 PM, LOV 107" width="900" height="1165" loading="lazy"></a>
+    <div>
+      <p><strong>Data has shape.</strong> Learn to see it, then teach machines to use it.</p>
+      <p style="margin-top:.75rem;">Please share the flyer with students who might be interested — it's letter-size and ready to print or post.</p>
+      <p style="margin-top:1rem;"><a class="btn-primary" href="assets/courses/ctml-flyer.pdf" download>📄 Download flyer (PDF)</a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Course Description</h2>
+  <p>Data has shape. Clusters, loops, branches, and holes in a dataset often carry meaning that standard statistics can miss. This course shows students how to <strong>see and measure that shape</strong> using ideas from topology, and how to put those ideas to work in <strong>modern machine learning</strong>. Topology is presented visually and geometrically — through pictures, models, and computer experiments rather than abstract algebra — so no advanced mathematical background is needed.</p>
+  <p style="margin-top:1rem;">The course moves in three parts:</p>
+  <ul class="prose-list">
+    <li><strong>Seeing shape.</strong> What it means for two shapes to be "the same," how complicated shapes are built from simple pieces (simplicial and cellular complexes), and how to detect components, loops, and voids.</li>
+    <li><strong>Topological data analysis.</strong> Persistence, barcodes, and the Mapper algorithm, applied to point clouds, networks, and images.</li>
+    <li><strong>Machine learning with topology.</strong> Decision trees and their splitting rules, multilayer perceptrons, and convolutional neural networks — and how topological features can strengthen these models.</li>
+  </ul>
+  <p>Python is taught from scratch through in-class labs, and the semester ends with a capstone project presented in class. All software is free and open source, and <strong>no textbook purchase is required</strong>.</p>
+</section>
+
+<section>
+  <h2 class="section-title">Who Is This Course For?</h2>
+  <p>Graduate students attend the same lectures and take the midterm exams at the same times as undergraduates, but they are held to a <strong>research-level standard</strong>. The graduate requirements are designed so that each graduate student finishes the course with a <strong>professional-quality manuscript</strong> suitable for submission to a workshop, conference, or journal.</p>
+  <p style="margin-top:1rem;">The course is open to graduate students from all departments, with enrollment priority for students in Mathematics, Computer Science, and Scientific Computing.</p>
+</section>
+
+<section>
+  <h2 class="section-title">Why This Course</h2>
+  <p>Topological data analysis is one of the fastest-growing areas where mathematics meets artificial intelligence, with applications in medicine, biology, materials science, and computer vision — yet it is usually taught only at an advanced level. This course opens the field to a broad audience and directly supports the goals of the <strong>AI@FSU</strong> initiative: expanding AI literacy, integrating AI into teaching and learning, and preparing students to use emerging AI technologies effectively and responsibly. Students learn how decision trees and neural networks actually work rather than treating them as black boxes, build complete AI pipelines with open-source tools, and examine the interpretability and limitations of AI methods.</p>
+</section>
+
+<section>
+  <h2 class="section-title">Learning Objectives</h2>
+  <p>Upon successful completion of this course, students will be able to:</p>
+  <ol class="prose-list">
+    <li>Describe shapes using core topological ideas, including continuous deformation, topological equivalence, and invariants such as connected components, loops, and voids.</li>
+    <li>Construct simplicial, cellular, and cubical complexes geometrically, use them to represent shapes, and compute the Euler characteristic by counting.</li>
+    <li>Build complexes from data, such as Čech and Vietoris–Rips complexes, and read persistence barcodes and diagrams to distinguish meaningful structure from noise.</li>
+    <li>Apply topological data analysis, including persistence and the Mapper algorithm, to point clouds, networks, and images.</li>
+    <li>Write Python programs to load, visualize, and analyze data.</li>
+    <li>Explain, implement, and evaluate core machine learning models, including decision trees and their splitting rules, random forests, multilayer perceptrons, and convolutional neural networks.</li>
+    <li>Combine topological features with machine learning models, assess whether they improve performance or interpretability, and recognize the limitations and responsible use of AI methods.</li>
+    <li>Communicate technical results through a collaborative project, an oral presentation, and a written report.</li>
+  </ol>
+  <p style="margin-top:1rem;"><strong>Additional objectives for graduate students:</strong></p>
+  <ol class="prose-list" start="9">
+    <li>Read and critically assess primary research literature on topological data analysis and topological machine learning.</li>
+    <li>Situate a research question within the existing literature, produce an original contribution, and document it in a professional-quality manuscript.</li>
+  </ol>
+</section>
+
+<section>
+  <h2 class="section-title">Weekly Schedule</h2>
+  <p class="note">Tentative; will be aligned with the official FSU academic calendar, including Spring Break. Exam dates will avoid major religious holy days.</p>
+  <div class="table-wrap">
+  <table class="teaching-table schedule-table">
+    <thead><tr><th>Week</th><th>Topics</th><th>Milestones</th></tr></thead>
+    <tbody>
+      <tr class="part-row"><td colspan="3">Part I · Seeing Shape: Geometric Topology</td></tr>
+      <tr><td>Week 1</td><td><span class="topic">Welcome to the Shape of Data</span>What is topology? Shape, closeness, and continuous deformation; why the shape of data matters in science and AI.<br><span class="lab">🐍 Python lab: Getting started in Google Colab</span></td><td></td></tr>
+      <tr><td>Week 2</td><td><span class="topic">When Are Two Shapes the Same?</span>Topological equivalence; invariants such as the number of pieces and holes; the sphere, torus, Möbius band, and Klein bottle.<br><span class="lab">🐍 Python lab: Variables, lists, loops, and functions</span></td><td></td></tr>
+      <tr><td>Week 3</td><td><span class="topic">Simplicial Complexes</span>Building shapes from vertices, edges, triangles, and tetrahedra; triangulating surfaces; the Euler characteristic by counting.<br><span class="lab">🐍 Python lab: NumPy and plotting</span></td><td></td></tr>
+      <tr><td>Week 4</td><td><span class="topic">Cellular Complexes and Counting Holes</span>Cellular and cubical complexes; covers and nerves; components, loops, and voids (Betti numbers without algebra).<br><span class="lab">🐍 Python lab: Drawing and exploring complexes</span></td><td></td></tr>
+      <tr><td>Week 5</td><td><span class="topic">From Data to Shapes</span>Point clouds and distance; growing balls around data points; Čech and Vietoris–Rips complexes; the role of scale.<br><span class="lab">🐍 Python lab: Building complexes from data</span></td><td></td></tr>
+      <tr><td>Week 6</td><td><span class="topic">Review and Midterm Exam 1</span>Review session and in-class exam covering Weeks 1–5.</td><td>Midterm Exam 1</td></tr>
+      <tr class="part-row"><td colspan="3">Part II · Topological Data Analysis</td></tr>
+      <tr><td>Week 7</td><td><span class="topic">Persistence: Shape Across Scales</span>Filtrations; components merging and loops appearing and disappearing as scale grows; barcodes and persistence diagrams; signal vs. noise.<br><span class="lab">🐍 Python lab: Ripser and persim</span></td><td></td></tr>
+      <tr><td>Week 8</td><td><span class="topic">TDA on Graphs and Networks</span>Graphs as shapes; clique complexes; filtrations on weighted networks; examples from social and biological networks.<br><span class="lab">🐍 Python lab: NetworkX</span></td><td>Project teams formed</td></tr>
+      <tr><td>Week 9</td><td><span class="topic">TDA in Image Analysis</span>Pixels as cubical complexes; thresholding grayscale images; topological signatures of images in medicine and materials science.<br><span class="lab">🐍 Python lab: Working with image data</span></td><td></td></tr>
+      <tr><td>Week 10</td><td><span class="topic">Mapper and Topological Features</span>The Mapper algorithm for high-dimensional data; turning barcodes into learnable features (summary statistics, Betti curves, persistence images).<br><span class="lab">🐍 Python lab: KeplerMapper and giotto-tda</span></td><td>Project proposal due</td></tr>
+      <tr><td>Week 11</td><td><span class="topic">Review and Midterm Exam 2</span>Review session and in-class exam covering Weeks 7–10.</td><td>Midterm Exam 2</td></tr>
+      <tr class="part-row"><td colspan="3">Part III · Machine Learning with Topology</td></tr>
+      <tr><td>Week 12</td><td><span class="topic">ML Foundations and Decision Trees</span>Supervised learning; training and test data; overfitting; accuracy and AUC; splitting rules (Gini impurity, entropy, information gain), pruning, and random forests.<br><span class="lab">🐍 Python lab: scikit-learn</span></td><td></td></tr>
+      <tr><td>Week 13</td><td><span class="topic">Neural Networks: The Multilayer Perceptron</span>Neurons and perceptrons; layers and activations; loss functions and gradient descent; overfitting and regularization.<br><span class="lab">🐍 Python lab: Training an MLP in PyTorch</span></td><td>Project progress check-ins</td></tr>
+      <tr><td>Week 14</td><td><span class="topic">CNNs and Topology in ML</span>Convolutions, filters, and pooling; image classification with CNNs; adding topological features to trees, MLPs, and CNNs; interpretable and responsible AI.<br><span class="lab">🐍 Python lab: A CNN with topological features</span></td><td></td></tr>
+      <tr><td>Week 15</td><td><span class="topic">Capstone Presentations</span>Presentations with audience questions and discussion.</td><td>Presentations</td></tr>
+      <tr><td>Finals</td><td><span class="topic">Final Exam Period</span>Remaining presentations, if needed. There is no final exam.</td><td>Final report due</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Assessment</h2>
+  <div class="table-wrap">
+  <table class="teaching-table">
+    <thead><tr><th>Component</th><th>Timing</th><th>Weight</th></tr></thead>
+    <tbody>
+      <tr><td>Midterm Exam 1 (with additional graduate problems)</td><td>Week 6</td><td>20%</td></tr>
+      <tr><td>Midterm Exam 2 (with additional graduate problems)</td><td>Week 11</td><td>20%</td></tr>
+      <tr><td>Research Project: Proposal with Annotated Bibliography</td><td>Week 10</td><td>5%</td></tr>
+      <tr><td>Research Project: Progress Check-in with Partial Manuscript</td><td>Week 13</td><td>5%</td></tr>
+      <tr><td>Research Project: Conference-Style Presentation</td><td>Week 15 / Final Exam Period</td><td>15%</td></tr>
+      <tr><td>Research Project: Final Manuscript and Code</td><td>Final Exam Period</td><td>35%</td></tr>
+      <tr><td><strong>Total</strong></td><td></td><td><strong>100%</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="margin-top:1rem;font-size:.92rem;color:var(--text-soft);"><strong>Grading scale:</strong> <strong>A</strong> 93–100 · <strong>A−</strong> 90–92.99 · <strong>B+</strong> 87–89.99 · <strong>B</strong> 83–86.99 · <strong>B−</strong> 80–82.99 · <strong>C+</strong> 77–79.99 · <strong>C</strong> 73–76.99 · <strong>C−</strong> 70–72.99 · <strong>D+</strong> 67–69.99 · <strong>D</strong> 63–66.99 · <strong>D−</strong> 60–62.99 · <strong>F</strong> Below 60. Cutoffs may be lowered at the instructor's discretion but will not be raised.</p>
+</section>
+
+<section>
+  <h2 class="section-title">Midterm Exams (40%)</h2>
+  <p>Midterm Exam 1 (Week 6) covers topological ideas, simplicial and cellular complexes, and building complexes from data. Midterm Exam 2 (Week 11) covers persistence and TDA for point clouds, networks, and images, including Mapper and topological features. Exams emphasize geometric reasoning — sketching complexes, counting simplices to find Euler characteristics, identifying components and loops, reading barcodes and persistence diagrams, and interpreting short Python outputs. One handwritten, letter-size reference sheet (both sides) is allowed; electronic devices and AI tools are not.</p>
+  <p style="margin-top:1rem;">The course has <strong>no graded homework</strong>. Ungraded practice problems with solutions and worked coding notebooks are posted on Canvas throughout the semester. The machine learning portion (Weeks 12–14) is assessed through the project.</p>
+  <p style="margin-top:1rem;">Graduate exams include <strong>additional problems requiring deeper mathematical reasoning and short proofs</strong>.</p>
+</section>
+
+<section>
+  <h2 class="section-title">How the Graduate Section Differs</h2>
+  <div class="table-wrap">
+  <table class="teaching-table compare-table">
+    <thead><tr><th>Component</th><th>Undergraduate Section</th><th>Graduate Section</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Midterm exams</strong></td><td data-label="Undergraduate">Two exams, 25% each</td><td data-label="Graduate">The same two exams, 20% each, with additional problems requiring deeper mathematical reasoning and short proofs</td></tr>
+      <tr><td><strong>Project format</strong></td><td data-label="Undergraduate">Teams of 3–4 students</td><td data-label="Graduate">Individual, or teams of at most 2 graduate students</td></tr>
+      <tr><td><strong>Project scope</strong></td><td data-label="Undergraduate">Apply and carefully evaluate existing TDA and ML methods on a real dataset</td><td data-label="Graduate">An original contribution — a new method, a new application, or a rigorous comparative study — positioned within the research literature</td></tr>
+      <tr><td><strong>Proposal</strong></td><td data-label="Undergraduate">1–2 page project plan</td><td data-label="Graduate">2–3 page proposal with an annotated bibliography (≥ 8 sources) and an identified target publication venue</td></tr>
+      <tr><td><strong>Progress check-in</strong></td><td data-label="Undergraduate">Meeting and progress memo</td><td data-label="Graduate">Meeting and partial manuscript draft (introduction, related work, methods) with written instructor feedback</td></tr>
+      <tr><td><strong>Presentation</strong></td><td data-label="Undergraduate">12–15 minute team presentation</td><td data-label="Graduate">20-minute conference-style research talk</td></tr>
+      <tr><td><strong>Final deliverable</strong></td><td data-label="Undergraduate">6–10 page report and reproducible code</td><td data-label="Graduate">12–20 page manuscript in the format of a target journal or conference (LaTeX recommended), ≥ 15 scholarly references, plus a publication-quality code repository</td></tr>
+      <tr><td><strong>Project weight</strong></td><td data-label="Undergraduate">50% of course grade</td><td data-label="Graduate">60% of course grade</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Research Project (60%)</h2>
+  <p>Working individually or in pairs, graduate students make an original contribution that combines topological data analysis with machine learning, documented as a manuscript ready for submission. The project is completed in stages with feedback throughout the semester:</p>
+  <ul class="prose-list">
+    <li><strong>Proposal with annotated bibliography (5%)</strong> — a 2–3 page proposal citing at least 8 sources and naming a target publication venue.</li>
+    <li><strong>Progress check-in (5%)</strong> — a meeting plus a partial manuscript draft (introduction, related work, and methods), with written instructor feedback.</li>
+    <li><strong>Research presentation (15%)</strong> — a 20-minute conference-style talk.</li>
+    <li><strong>Final manuscript and code (35%)</strong> — a 12–20 page manuscript in a target venue's format with at least 15 scholarly references, plus a documented, publication-quality code repository.</li>
+  </ul>
+  <p><strong>Manuscript evaluation</strong> is modeled on peer review: significance and originality; mathematical and technical correctness; experimental design, including appropriate baselines and statistical evaluation; clarity of writing; and reproducibility.</p>
+</section>
+
+<section>
+  <h2 class="section-title">Additional Graduate Readings</h2>
+  <p>Graduate students read primary research literature, including:</p>
+  <ul class="prose-list">
+    <li>H. Adams et al., "Persistence images: a stable vector representation of persistent homology," <em>Journal of Machine Learning Research</em>, 2017.</li>
+    <li>C. Hofer, R. Kwitt, M. Niethammer &amp; A. Uhl, "Deep learning with topological signatures," <em>Advances in Neural Information Processing Systems</em>, 2017.</li>
+    <li>F. Hensel, M. Moor &amp; B. Rieck, "A survey of topological machine learning methods," <em>Frontiers in Artificial Intelligence</em>, 2021.</li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="section-title">Course Materials</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>📘 Primary References</h3>
+      <ul class="prose-list" style="font-size:.9rem;color:var(--text-soft);margin-left:1.1rem;">
+        <li>G. Carlsson &amp; M. Vejdemo-Johansson, <em>Topological Data Analysis with Applications</em>, Cambridge, 2021.</li>
+        <li>T. K. Dey &amp; Y. Wang, <em>Computational Topology for Data Analysis</em>, Cambridge, 2022.</li>
+        <li>A. Hatcher, <em>Algebraic Topology</em>, Cambridge, 2002.</li>
+        <li>J. R. Munkres, <em>Topology</em>, 2nd ed., Prentice Hall, 2000.</li>
+        <li>J. R. Munkres, <em>Elements of Algebraic Topology</em>, Addison-Wesley, 1984.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🤖 Machine Learning &amp; Python</h3>
+      <ul class="prose-list" style="font-size:.9rem;color:var(--text-soft);margin-left:1.1rem;">
+        <li>G. James, D. Witten, T. Hastie, R. Tibshirani &amp; J. Taylor, <em>An Introduction to Statistical Learning with Applications in Python</em>, Springer, 2023.</li>
+        <li>A. Zhang, Z. C. Lipton, M. Li &amp; A. J. Smola, <em>Dive into Deep Learning</em>, Cambridge, 2023.</li>
+        <li>J. VanderPlas, <em>Python Data Science Handbook</em>, O'Reilly, 2016.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📄 Supplementary Readings</h3>
+      <ul class="prose-list" style="font-size:.9rem;color:var(--text-soft);margin-left:1.1rem;">
+        <li>R. Ghrist, <em>Elementary Applied Topology</em>, 2014.</li>
+        <li>R. Ghrist, "Barcodes: the persistent topology of data," <em>Bull. AMS</em> 45 (2008).</li>
+        <li>G. Carlsson, "Topology and data," <em>Bull. AMS</em> 46 (2009).</li>
+        <li>F. Chazal &amp; B. Michel, "An introduction to topological data analysis," <em>Frontiers in AI</em> 4 (2021).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>💻 Software (free &amp; open source)</h3>
+      <p>Python 3 in <strong>Google Colab</strong> — no installation required. NumPy, Matplotlib, scikit-learn, PyTorch, and NetworkX, plus the TDA libraries Ripser and persim (scikit-tda), GUDHI, giotto-tda, and KeplerMapper. Students may use their own laptops or FSU computer labs.</p>
+    </div>
+  </div>
+  <p style="margin-top:1rem;">Lecture notes, practice problems, and coding notebooks posted on <strong>Canvas</strong> cover all required material; readings are assigned from selected sections of the references above.</p>
+</section>
+
+<section>
+  <h2 class="section-title">Use of Generative AI</h2>
+  <p>Consistent with the AI@FSU emphasis on effective and responsible AI use, generative AI tools (chatbots, AI coding assistants) <strong>may be used on the project</strong> for brainstorming, debugging code, and improving the clarity of writing. Students who use them must include a brief <strong>AI-use statement</strong> in the proposal and final report, must verify the correctness of all AI-assisted code, mathematics, and text, and must never submit fabricated data, results, or citations. <strong>AI tools are not permitted during exams.</strong></p>
+  <p style="margin-top:1rem;" class="note">Full course and university policies (attendance, make-up exams, late work, academic honor, accessibility) are in the official syllabus on Canvas.</p>
+</section>
+
+<section>
+  <h2 class="section-title">Questions?</h2>
+  <p>Interested in the course or wondering whether it's a good fit? Email <a href="mailto:atola@fsu.edu?subject=Computational%20Topology%20and%20ML%20course%20(Graduate)">atola@fsu.edu</a>.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Astrit Tola · Department of Mathematics, Florida State University</p>
+  <p>Office: LOV 424 · Mailbox: LOV 0208, MC 4510 · Tallahassee, FL</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

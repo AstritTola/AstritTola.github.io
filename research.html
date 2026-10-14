@@ -32,6 +32,7 @@
 <section>
   <h2 class="section-title">Research Overview</h2>
   <p>My research develops <strong>topology-aware machine learning</strong> methods that combine ideas from algebraic topology, geometry, and modern deep learning. I am especially interested in problems where graph structure and higher-order interactions matter — molecules, biological networks, biomedical knowledge graphs, and cybersecurity knowledge graphs.</p>
+  <p style="margin-top:1rem;">I also bring these ideas to <strong>temporal graphs</strong>, where networks change over time (TopoGED, NeurIPS 2026).</p>
   <p style="margin-top:1rem;">Three guiding questions drive the work:</p>
   <ul style="margin:1rem 0 1rem 1.5rem; line-height:1.9; color:var(--text);">
     <li><strong>How can topology serve as an inductive bias</strong> for graph neural networks and Transformers?</li>
@@ -45,8 +46,9 @@
   <div class="card-grid">
     <div class="card"><h3>🧮 Topological Data Analysis</h3><p>Persistent homology, Euler characteristic curves, filtration-based descriptors, and stable topological summaries as inductive biases for ML.</p></div>
     <div class="card"><h3>🕸️ Graph Classification &amp; Embeddings</h3><p>Topology-aware Transformers and embeddings for graph-level tasks — <strong>TopoFormer</strong>, <strong>TopER</strong>.</p></div>
+    <div class="card"><h3>⏱️ Temporal Graph Learning</h3><p>Topological encoder–decoder frameworks for graphs whose nodes and edges evolve over time — <strong>TopoGED</strong>.</p></div>
     <div class="card"><h3>📍 Node Classification</h3><p>Spatial and contextual coordinates for node-level prediction — <strong>SCNode</strong>.</p></div>
-    <div class="card"><h3>🔗 Link Prediction</h3><p>Strong proximity-based baselines and dual-perspective methods on graphs and knowledge graphs — <strong>PROXI</strong>, <strong>DuoLink</strong>.</p></div>
+    <div class="card"><h3>🔗 Link Prediction</h3><p>Strong proximity-based baselines and dual-perspective methods on graphs and knowledge graphs — <strong>PROXI</strong>, <strong>DuoLink</strong>; knowledge graph completion via harmonic optimal transport — <strong>HOT-KG</strong>.</p></div>
     <div class="card"><h3>🧬 AI for Drug Discovery &amp; Biology</h3><p>Topological ML for identifying molecular compounds — including compounds targeting bacterial propionate metabolism.</p></div>
     <div class="card"><h3>🛡️ AI for Cybersecurity</h3><p>Topology-aware retrieval and correlation across disparate cybersecurity knowledge graphs — <strong>TopoCorr-KG</strong> (ReliaQuest Innovation Challenge).</p></div>
   </div>
@@ -60,6 +62,18 @@
       <h3><a href="topocorr-kg.html">TopoCorr-KG </a><small>2026 – present · ReliaQuest</small></h3>
       <p><em>Topology-Aware Retrieval and Correlation Across Disparate Cybersecurity Knowledge Graphs.</em> AI-driven methods for retrieving and correlating information across fragmented cybersecurity knowledge graphs (MITRE ATT&amp;CK, CVE/NVD, internal SOC graphs) to improve cyber threat analysis and decision-making.</p>
       <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);"><strong>PI:</strong> A. Tola · <strong>Co-PI:</strong> M. Asllani · <strong>GTA:</strong> Ece Karacam · <strong>UTA:</strong> Sebastian Powers</p>
+    </div>
+
+    <div class="card">
+      <h3>HOT-KG <small>2026 – present · FSU UROP · Knowledge Graphs</small></h3>
+      <p><em>Harmonic Optimal Transport for Knowledge Graph Completion.</em> An undergraduate research project exploring harmonic optimal transport as a principled way to infer missing facts (links) in knowledge graphs.</p>
+      <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);">FSU Undergraduate Research Opportunity Program (UROP) · Mentor: A. Tola · 3 undergraduate researchers.</p>
+    </div>
+
+    <div class="card">
+      <h3>TopoGED <small>NeurIPS 2026 · Temporal Graphs</small></h3>
+      <p><em>A Topological Encoder-Decoder Framework for Temporal Graph Learning.</em> Brings topological encodings to temporal graphs — networks whose structure changes over time — within an encoder–decoder architecture.</p>
+      <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);">With R. Buck, K. Shamsi, T. G. B. Ngo, B. Coskunuzer, C. G. Akcora.</p>
     </div>
 
     <div class="card">
@@ -81,7 +95,7 @@
     </div>
 
     <div class="card">
-      <h3>PROXI <small>TMLR 2025 · Link Prediction</small></h3>
+      <h3>PROXI <small>TMLR 2025 · LoG 2026 (TMLR Journal Track) · Link Prediction</small></h3>
       <p><em>Challenging the GNNs for Link Prediction.</em> A surprisingly strong proximity-based baseline that exposes how simple structural features can rival — and often beat — more complex GNNs on link prediction benchmarks.</p>
       <p style="margin-top:.5rem; font-size:.85rem; color:var(--text-soft);">With J. A. Myrich, B. Coskunuzer. <a href="https://openreview.net/pdf?id=u9EHndbiVw" target="_blank" rel="noopener">PDF</a>.</p>
     </div>
@@ -102,12 +116,16 @@
 </section>
 
 <section>
-  <h2 class="section-title">Team on TopoCorr-KG</h2>
+  <h2 class="section-title">Student Researchers</h2>
   <div class="news-item">
-    <h3>Research Assistants</h3>
+    <h3>TopoCorr-KG · Research Assistants</h3>
     <p>The <strong>TopoCorr-KG</strong> project at FSU is supported by <strong>Ece Karacam (GTA)</strong> and <strong>Sebastian Powers (UTA)</strong>. Learn more on the <a href="topocorr-kg.html">project page</a>.</p>
-    <p style="margin-top:.5rem;">Future students interested in topological ML, graph AI, or AI for cybersecurity / drug discovery are welcome to <a href="mailto:atola@fsu.edu">get in touch</a> about upcoming opportunities.</p>
   </div>
+  <div class="news-item">
+    <h3>HOT-KG · UROP Undergraduate Researchers</h3>
+    <p>The <strong>HOT-KG</strong> project (Harmonic Optimal Transport for Knowledge Graph Completion) runs through FSU's <strong>Undergraduate Research Opportunity Program (UROP)</strong>, with <strong>three undergraduate researchers</strong>.</p>
+  </div>
+  <p style="margin-top:.5rem;">Future students interested in topological ML, graph AI, knowledge graphs, or AI for cybersecurity / drug discovery are welcome to <a href="mailto:atola@fsu.edu">get in touch</a> about upcoming opportunities.</p>
 </section>
 
 <section>
@@ -116,9 +134,9 @@
   <ul style="margin:1rem 0 1rem 1.5rem; line-height:1.9; color:var(--text);">
     <li><strong>Baris Coskunuzer</strong> — UT Dallas (Ph.D. advisor)</li>
     <li><strong>Malbor Asllani</strong> — Assistant Professor, Florida State University (Mentor)</li>
-    <li><strong>Cuneyt Gurcan Akcora</strong> — University of Central Florida (TopER, TopoFormer, SCNode)</li>
+    <li><strong>Cuneyt Gurcan Akcora</strong> — University of Central Florida (TopER, TopoFormer, SCNode, TopoGED)</li>
     <li><strong>Mehmet Candas, Duane Winkler</strong> — UT Dallas (Bacterial Propionate Metabolism)</li>
-    <li><strong>MD Joshem Uddin, Funmilola Mary Taiwo, Dannie Zhabilov, Jack A. Myrich, Surbhi Kumar , Shan Aziz</strong>  </li>
+    <li><strong>MD Joshem Uddin, Funmilola Mary Taiwo, Dannie Zhabilov, Jack A. Myrich, Surbhi Kumar, Shan Aziz, R. Buck, K. Shamsi, T. G. B. Ngo</strong></li>
   </ul>
 </section>
 
