@@ -55,9 +55,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://astrittola.github.io/topomlai.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
 </urlset>
